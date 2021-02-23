@@ -8,7 +8,7 @@ import DashboardLayout from '~/layouts/DashboardLayout';
 
 const AppRoutes = {
   path: PATH_APP.root,
-  guard: AuthProtect,
+  // guard: AuthProtect,
   layout: DashboardLayout,
   routes: [
     // MAIN DASHBOARD

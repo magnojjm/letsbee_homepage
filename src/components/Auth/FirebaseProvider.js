@@ -4,7 +4,7 @@ import firebase from 'firebase/app';
 import { store } from '~/redux/store';
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-// import { firebaseConfig } from '~/config';
+import { firebaseConfig } from '~/config';
 import { createFirestoreInstance } from 'redux-firestore';
 import { ReactReduxFirebaseProvider, isLoaded } from 'react-redux-firebase';
 
