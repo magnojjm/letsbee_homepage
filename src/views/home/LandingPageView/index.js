@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   content: {
     overflow: 'hidden',
     position: 'relative',
-    backgroundColor: theme.palette.background.default
+    backgroundColor: theme.palette.background.white
   }
 }));
 
@@ -31,12 +31,7 @@ function LandingPageView() {
     <Page title="Minimal | Home" id="move_top" className={classes.root}>
       <Hero />
       <div className={classes.content}>
-        <About />
-        {/* <HugePackElements /> */}
-        <Partners />
-        {/* <DarkMode />
-        <CleanInterfaces /> */}
-        {/* <Advertisement /> */}
+      <DarkMode />
         <Footer />
       </div>
     </Page>

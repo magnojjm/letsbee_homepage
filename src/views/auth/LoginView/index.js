@@ -87,10 +87,7 @@ function LoginView() {
     validationSchema: LoginSchema,
     onSubmit: async (values, { setErrors, setSubmitting }) => {
       try {
-        await firebase.login({
-          email: values.email,
-          password: values.password
-        });
+        
         enqueueSnackbar('Login success', {
           variant: 'success',
           action: key => (
@@ -99,9 +96,7 @@ function LoginView() {
             </MIconButton>
           )
         });
-        if (isMountedRef.current) {
-          setSubmitting(false);
-        }
+        setSubmitting(false);
       } catch (err) {
         if (isMountedRef.current) {
           setSubmitting(false);

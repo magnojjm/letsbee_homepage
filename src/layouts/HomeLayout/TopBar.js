@@ -43,7 +43,8 @@ const APP_BAR_DESKTOP = 96;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    boxShadow: 'none'
+    boxShadow: 'none',
+    background:'#fcb200'
   },
   toolbar: {
     height: APP_BAR_MOBILE,

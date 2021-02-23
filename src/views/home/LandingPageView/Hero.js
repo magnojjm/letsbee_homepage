@@ -98,79 +98,10 @@ function Hero({ className }) {
         variants={varWrapEnter}
         className={clsx(classes.root, className)}
       >
-        <motion.img
-          alt="overlay"
-          src="/static/images/overlay.svg"
-          variants={varFadeIn}
-          className={classes.heroOverlay}
-        />
+         
+ 
 
-        <motion.img
-          alt="product"
-          data-sizes="auto"
-          data-src={getImg(600)}
-          data-srcset={`${getImg(1200)} 600w, ${getImg(1600)} 960w`}
-          variants={varFadeInUp}
-          className={clsx(classes.heroImg, 'lazyload')}
-        />
-
-        <Container maxWidth="lg">
-          <div className={classes.content}>
-            <motion.div variants={varFadeInRight}>
-              <Box
-                component="h1"
-                sx={{ typography: 'h1', color: 'common.white' }}
-              >
-                All you <br />
-                Need in <br /> one
-                <Typography component="span" variant="h1" color="primary">
-                  &nbsp;App
-                </Typography>
-              </Box>
-            </motion.div>
-
-            <motion.div variants={varFadeInRight}>
-              <Box component="p" sx={{ color: 'common.white', py: 5 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Maecenas porta, ante vel euismod condimentum, sapien nisl facilisis risus, 
-              vitae ultricies quam ante eget metus. .
-              </Box>
-            </motion.div>
-
-            {/* <motion.div variants={varFadeInRight} className={classes.link}>
-              <Box
-                component="img"
-                alt="sketch icon"
-                src="/static/icons/ic_sketch.svg"
-                sx={{ mr: 1, width: 20, height: 20 }}
-              />
-              <Link
-                color="inherit"
-                underline="always"
-                href={PATH_HOME.cloud}
-                target="_blank"
-              >
-                Preview in Sketch Cloud
-              </Link>
-            </motion.div> */}
-
-            {/* <motion.div variants={varFadeInRight}>
-              <Button
-                size="large"
-                variant="contained"
-                component={RouterLink}
-                to={PATH_APP.main.dashboard}
-                startIcon={<Icon icon={flashFill} width={20} height={20} />}
-              >
-                Live Preview
-              </Button>
-            </motion.div> */}
-
-            
-          </div>
-        </Container>
       </motion.div>
-      <Box sx={{ height: { md: '100vh' } }} />
     </>
   );
 }

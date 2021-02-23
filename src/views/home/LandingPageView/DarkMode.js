@@ -11,16 +11,49 @@ import {
   varZoomInOut,
   varFadeInRight
 } from '~/components/Animate';
-import { makeStyles } from '@material-ui/core/styles';
+import {   createMuiTheme,
+  MuiThemeProvider,
+  makeStyles,
+  withStyles, } from '@material-ui/core/styles';
 import { Box, Grid, Container, Typography } from '@material-ui/core';
+import CarouselAnimation from '../../uikit/extra-components/CarouselView/CarouselAnimation';
+import faker from 'faker';
+import { getImgFeed } from '~/utils/getImages';
 
 // ----------------------------------------------------------------------
 
+
+const theme = createMuiTheme({
+  overrides: {
+    makeStyles: {
+      root: {
+        backgroundColor:'#fff'
+        }
+    },
+  },
+});
+
+
+const CAROUSELS = [...Array(5)].map((item, index) => {
+  const setIndex = index + 1;
+  return {
+    title: faker.name.title(),
+    description: faker.lorem.paragraphs(),
+    image: {
+      thumb: getImgFeed(128, setIndex),
+      small: getImgFeed(600, setIndex),
+      medium: getImgFeed(960, setIndex),
+      large: getImgFeed(1440, setIndex)
+    }
+  };
+});
+
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(20, 0),
-    backgroundColor: theme.palette.grey[900]
+    padding: '96px 0px 0px 0px',
+    backgroundColor: '#fff'
   },
+ 
   content: {
     textAlign: 'center',
     position: 'relative',
@@ -40,9 +73,7 @@ const useStyles = makeStyles(theme => ({
     WebkitTransform: 'translateZ(0)',
     WebkitBackfaceVisibility: 'hidden',
     filter: 'drop-shadow(-80px 80px 120px #000000)',
-    [theme.breakpoints.up('md')]: {
-      maxWidth: 'calc(100% - 48px)'
-    }
+    
   },
   switch: {
     width: 56,
@@ -52,18 +83,16 @@ const useStyles = makeStyles(theme => ({
     display: 'inline-flex',
     justifyContent: 'flex-start',
     padding: theme.spacing(0, 0.5),
-    borderRadius: theme.shape.borderRadiusSm,
-    backgroundColor: theme.palette.grey[500_12]
+    backgroundColor: theme.palette.common.white
   },
   switchOn: {
     justifyContent: 'flex-end',
-    backgroundColor: theme.palette.primary.main
+    backgroundColor: theme.palette.common.white
   },
   handle: {
     width: 16,
     height: 16,
     boxShadow: theme.shadows[25].primary,
-    borderRadius: theme.shape.borderRadius,
     backgroundColor: theme.palette.common.white
   },
   handleOn: { width: 20 }
@@ -86,6 +115,7 @@ const getImgDark = width =>
 function ToggleSwitch({ darkMode, onToggleTheme }) {
   const classes = useStyles();
   return (
+    <MuiThemeProvider theme={theme}>
     <div
       onClick={onToggleTheme}
       className={clsx(classes.switch, { [classes.switchOn]: darkMode })}
@@ -96,6 +126,7 @@ function ToggleSwitch({ darkMode, onToggleTheme }) {
         className={clsx(classes.handle, { [classes.handleOn]: darkMode })}
       />
     </div>
+    </MuiThemeProvider>
   );
 }
 
@@ -107,16 +138,16 @@ function DarkMode({ className }) {
   const classes = useStyles();
   const dispatch = useDispatch();
   const { darkMode } = useSelector(state => state.theme);
-  const onToggleTheme = useCallback(() => dispatch(toggleTheme()), [dispatch]);
 
   return (
     <div className={clsx(classes.root, className)}>
-      <Container maxWidth="lg" sx={{ position: 'relative' }}>
+      <Container maxWidth="unset" sx={{ position: 'relative' }} style={{paddingLeft:'0px',paddingRight:'0px'}}>
         <Box
           component="img"
           alt="image shape"
           src="/static/images/shape.svg"
           sx={{
+            
             top: 0,
             right: 0,
             bottom: 0,
@@ -128,58 +159,22 @@ function DarkMode({ className }) {
         />
 
         <Grid container spacing={5} direction="row-reverse">
-          <Grid item xs={12} md={4}>
-            <div className={classes.content}>
+          <Grid item xs={12} md={12}>
+           
               <MotionInView
                 variants={varFadeInUp}
                 sx={{ color: 'text.disabled' }}
               >
-                <Typography display="block" variant="overline" gutterBottom>
-                  Easy switch between styles.
-                </Typography>
-              </MotionInView>
+          
+          <CarouselAnimation carousels={CAROUSELS} />
 
-              <MotionInView
-                variants={varFadeInUp}
-                sx={{ color: 'common.white' }}
-              >
-                <Typography variant="h2" paragraph>
-                  Dark Mode
-                </Typography>
-              </MotionInView>
 
-              <MotionInView
-                variants={varFadeInUp}
-                sx={{ color: 'common.white', mb: 5 }}
-              >
-                <Typography>
-                  A dark theme that feels easier on the eyes.
-                </Typography>
               </MotionInView>
-
-              <MotionInView variants={varFadeInRight}>
-                <ToggleSwitch
-                  darkMode={darkMode}
-                  onToggleTheme={onToggleTheme}
-                />
-              </MotionInView>
-            </div>
+ 
+           
           </Grid>
 
-          <Grid item xs={12} md={8}>
-            <MotionInView variants={varZoomInOut}>
-              <img
-                alt="theme mode"
-                data-src={darkMode ? getImgDark(720) : getImgLight(720)}
-                data-srcset={
-                  darkMode
-                    ? `${getImgDark(600)} 600w, ${getImgDark(1200)} 960w`
-                    : `${getImgLight(600)} 600w, ${getImgLight(1200)} 960w`
-                }
-                className={clsx(classes.image, 'lazyload')}
-              />
-            </MotionInView>
-          </Grid>
+           
         </Grid>
       </Container>
     </div>

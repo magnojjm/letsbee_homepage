@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
         theme.palette.grey[900]
       } 0%,${alpha(theme.palette.grey[900], 0)} 100%)`
     }
-  }
+  },
+  
 }));
 
 // ----------------------------------------------------------------------
@@ -47,7 +48,7 @@ function SlideItem({ item, isActive }) {
         src="/static/images/placeholder.svg"
         srcSet={`${image.small} 600w, ${image.medium} 960w, ${image.large} 1280w`}
         loading="lazy"
-        sx={{ width: '100%', height: 480, objectFit: 'cover' }}
+        sx={{ width: '100%', height: 719, objectFit: 'cover' }}
       />
 
       <Box
@@ -112,7 +113,7 @@ function CarouselAnimation({ carousels, className, ...other }) {
   };
 
   return (
-    <Card className={clsx(classes.root, className)} {...other}>
+    <Card style={{borderRadius:'0px'}} className={clsx(classes.root, className)} {...other}>
       <Slider ref={carouselRef} {...settings}>
         {carousels.map((item, index) => (
           <SlideItem
