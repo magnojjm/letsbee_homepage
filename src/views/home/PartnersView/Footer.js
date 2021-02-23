@@ -32,9 +32,9 @@ function Footer({ className }) {
         </ScrollLink>
 
         <Typography variant="caption">
-          letsbeelife © All rights reserved 2021
-          {/* <br /> Made by &nbsp;
-          <Link href="https://minimals.cc/">minimals.cc</Link> */}
+          © All rights reserved
+          <br /> Made by &nbsp;
+          <Link href="https://minimals.cc/">minimals.cc</Link>
         </Typography>
       </Container>
     </div>

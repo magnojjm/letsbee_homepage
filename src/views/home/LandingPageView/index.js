@@ -3,7 +3,9 @@ import Hero from './Hero';
 import Footer from './Footer';
 import DarkMode from './DarkMode';
 import Page from '~/components/Page';
-import Minimal from './Minimal';
+// import Minimal from './Minimal';
+import About from './About';
+import Partners from './Partners'
 import Advertisement from './Advertisement';
 import CleanInterfaces from './CleanInterfaces';
 import HugePackElements from './HugePackElements';
@@ -29,11 +31,12 @@ function LandingPageView() {
     <Page title="Minimal | Home" id="move_top" className={classes.root}>
       <Hero />
       <div className={classes.content}>
-        <Minimal />
-        <HugePackElements />
-        <DarkMode />
-        <CleanInterfaces />
-        <Advertisement />
+        <About />
+        {/* <HugePackElements /> */}
+        <Partners />
+        {/* <DarkMode />
+        <CleanInterfaces /> */}
+        {/* <Advertisement /> */}
         <Footer />
       </div>
     </Page>

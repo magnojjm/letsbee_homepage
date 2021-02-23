@@ -83,7 +83,6 @@ const useStyles = makeStyles(theme => ({
 
 const getImg = width =>
   `${BASE_IMG}w_${width}/v1611472901/upload_minimal/home/hero.png`;
-
 Hero.propTypes = {
   className: PropTypes.string
 };
@@ -122,23 +121,23 @@ function Hero({ className }) {
                 component="h1"
                 sx={{ typography: 'h1', color: 'common.white' }}
               >
-                Start a <br />
-                New Project <br /> with
+                All you <br />
+                Need in <br /> one
                 <Typography component="span" variant="h1" color="primary">
-                  &nbsp;Minimal
+                  &nbsp;App
                 </Typography>
               </Box>
             </motion.div>
 
             <motion.div variants={varFadeInRight}>
               <Box component="p" sx={{ color: 'common.white', py: 5 }}>
-                The starting point for your next project based on
-                easy-to-customize Material-UI © helps you build apps faster and
-                better.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Maecenas porta, ante vel euismod condimentum, sapien nisl facilisis risus, 
+              vitae ultricies quam ante eget metus. .
               </Box>
             </motion.div>
 
-            <motion.div variants={varFadeInRight} className={classes.link}>
+            {/* <motion.div variants={varFadeInRight} className={classes.link}>
               <Box
                 component="img"
                 alt="sketch icon"
@@ -153,9 +152,9 @@ function Hero({ className }) {
               >
                 Preview in Sketch Cloud
               </Link>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div variants={varFadeInRight}>
+            {/* <motion.div variants={varFadeInRight}>
               <Button
                 size="large"
                 variant="contained"
@@ -165,33 +164,9 @@ function Hero({ className }) {
               >
                 Live Preview
               </Button>
-            </motion.div>
+            </motion.div> */}
 
-            <Box
-              sx={{
-                mt: 5,
-                display: 'flex',
-                justifyContent: { xs: 'center', md: 'left' },
-                '& > *:not(:last-of-type)': { mr: 1.5 }
-              }}
-            >
-              <motion.img
-                variants={varFadeInRight}
-                src="/static/icons/ic_m_sketch.svg"
-              />
-              <motion.img
-                variants={varFadeInRight}
-                src="/static/icons/ic_m_material.svg"
-              />
-              <motion.img
-                variants={varFadeInRight}
-                src="/static/icons/ic_m_react.svg"
-              />
-              <motion.img
-                variants={varFadeInRight}
-                src="/static/icons/ic_m_redux.svg"
-              />
-            </Box>
+            
           </div>
         </Container>
       </motion.div>

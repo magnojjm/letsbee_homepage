@@ -30,10 +30,12 @@ import { MIconButton } from '~/@material-extend';
 // ----------------------------------------------------------------------
 
 const MENU_LINKS = [
-  { title: 'Home', icon: homeFill, href: '/' },
-  { title: 'Components', icon: roundStreetview, href: PATH_HOME.components },
-  { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard },
-  { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root }
+  // { title: 'Home', icon: homeFill, href: '/' },
+  // { title: 'Components', icon: roundStreetview, href: PATH_HOME.components },
+  // { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard },
+  // { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root }
+  { title: 'About Us', icon: homeFill, href: '/'},
+  { title: 'Partner With Us', icon: roundStreetview, href: '/partners'}
 ];
 
 const APP_BAR_MOBILE = 64;
@@ -184,7 +186,7 @@ function TopBar() {
             component={Link}
             href={PATH_HOME.purchase}
           >
-            Purchase Now
+            Login
           </Button>
 
           <Hidden mdUp>

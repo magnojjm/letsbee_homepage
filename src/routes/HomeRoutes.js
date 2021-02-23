@@ -19,6 +19,11 @@ const HomeRoutes = {
       component: lazy(() => import('src/views/home/ComponentsView'))
     },
     {
+      exact: true,
+      path: '/partners',
+      component: lazy(() => import('src/views/home/PartnersView'))
+    },
+    {
       component: () => <Redirect to="/404" />
     }
   ]

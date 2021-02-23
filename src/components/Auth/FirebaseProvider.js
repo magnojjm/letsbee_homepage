@@ -4,14 +4,29 @@ import firebase from 'firebase/app';
 import { store } from '~/redux/store';
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { firebaseConfig } from '~/config';
+// import { firebaseConfig } from '~/config';
 import { createFirestoreInstance } from 'redux-firestore';
 import { ReactReduxFirebaseProvider, isLoaded } from 'react-redux-firebase';
 
 // ----------------------------------------------------------------------
 
+// if (!firebase.apps.length) {
+//   firebase.initializeApp(firebaseConfig);
+//   firebase.firestore();
+// }
+
 if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(
+    {
+      apiKey: "AIzaSyB82gQg9j3TOp9PvetTZg2hwUzlNNTfNTc",
+      authDomain: "minimal-letsbee.firebaseapp.com",
+      projectId: "minimal-letsbee",
+      storageBucket: "minimal-letsbee.appspot.com",
+      messagingSenderId: "508201824530",
+      appId: "1:508201824530:web:76597a4cbc48732bfa03cb",
+      measurementId: "G-S5HR4K75FL"
+    }
+  );
   firebase.firestore();
 }
 
