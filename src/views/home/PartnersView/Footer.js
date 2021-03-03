@@ -11,7 +11,8 @@ import { Link, Container, Typography } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   root: {
     textAlign: 'center',
-    padding: theme.spacing(5, 0)
+    padding: '41px 0px',
+    background:'#fcb200'
   }
 }));
 
@@ -32,9 +33,7 @@ function Footer({ className }) {
         </ScrollLink>
 
         <Typography variant="caption">
-          © All rights reserved
-          <br /> Made by &nbsp;
-          <Link href="https://minimals.cc/">minimals.cc</Link>
+          Let's Bee 2021 © All rights reserved
         </Typography>
       </Container>
     </div>

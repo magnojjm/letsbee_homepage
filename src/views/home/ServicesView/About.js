@@ -25,6 +25,18 @@ const useStyles = makeStyles(theme => ({
           } 100%)`
         : 'none'
   },
+  textHead: {
+    color: '#000000'
+  },
+  learnMore: {
+    width: '176px',
+    height: '35px',
+    margin: '90px 36px 0px 0px;',
+    padding: '8px 28px 7px',
+    borderRadius: '15px',
+    border: 'solid 2px #000000',
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+  },
   content: {
     maxWidth: 520,
     margin: 'auto',
@@ -109,83 +121,30 @@ function AboutHelps({ className }) {
     ? variantScreenRight
     : variantScreenRightMobile;
 
-  const getImg = (width, index) =>
-    `${BASE_IMG}w_${width}/v1611472901/upload_minimal/home/screen_${
-      theme.palette.mode === 'light' ? 'light' : 'dark'
-    }_${index + 1}.png`;
-
   return (
     <div className={clsx(classes.root, className)}>
       <Container maxWidth="lg">
         <Grid container spacing={5}>
-          <Grid item xs={12} md={4} lg={5}>
-            <div className={classes.content}>
-              {/* <MotionInView variants={textAnimate}>
-                <Typography
-                  display="block"
-                  variant="overline"
-                  color="textSecondary"
-                  gutterBottom
-                >
-                  Interface Starter Kit
-                </Typography>
-              </MotionInView> */}
-
+          <Grid item xs={12} sm={4} lg={5}>
+            <div >
               <MotionInView variants={textAnimate}>
-                <Typography variant="h2" paragraph>
-                  About Us
-                </Typography>
+                <img src="/static/bee_attempt_3.png" />
               </MotionInView>
-
-              <MotionInView variants={textAnimate}>
-                <Typography color="textSecondary">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Maecenas porta, ante vel euismod condimentum, 
-                sapien nisl facilisis risus, vitae ultricies quam ante eget metus. .
-                </Typography>
-              </MotionInView>
-
-              {/* <MotionInView variants={textAnimate} sx={{ mt: 5 }}>
-                <Button
-                  size="large"
-                  color="inherit"
-                  variant="outlined"
-                  component={RouterLink}
-                  to={PATH_HOME.components}
-                >
-                  View All Services
-                </Button>
-              </MotionInView> */}
             </div>
           </Grid>
 
-          <Grid item xs={12} md={8} lg={7} className={classes.screens}>
-            {[...Array(3)].map((screen, index) => (
-              <MotionInView
-                key={index}
-                variants={
-                  (index === 0 && screenLeftAnimate) ||
-                  (index === 1 && screenCenterAnimate) ||
-                  screenRightAnimate
-                }
-                transition={transition}
-                className={clsx(classes.screen, {
-                  [classes.screenLeft]: index === 0,
-                  [classes.screenCenter]: index === 1,
-                  [classes.screenRight]: index === 2
-                })}
-              >
-                <Box
-                  component="img"
-                  alt={`screen ${index + 1}`}
-                //   src={getImg(720, index)}
-                src="/static/images/section-02.png"
-                  variants={varFadeInUp}
-                  className="lazyload"
-                  sx={{ width: { xs: '80%', sm: '100%' } }}
-                />
-              </MotionInView>
-            ))}
+          <Grid item xs={12} sm={8} lg={7}>
+            <MotionInView variants={textAnimate}>
+                  <Typography className={classes.textHead} color="textSecondary" variant="h1">
+                  Let’s Bee<br />
+                  lets you get what you<br />
+                  desire on-the-fly!
+                  </Typography>
+                  <Typography variant="h3">
+                  It’s your all-in-one lifestyle platform.
+                  </Typography>
+                </MotionInView>
+                <Button className={classes.learnMore} variant="outline">Learn more</Button>
           </Grid>
         </Grid>
       </Container>

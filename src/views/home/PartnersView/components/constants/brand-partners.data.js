@@ -35,12 +35,12 @@ export const brand_partners = [
         name: 'tosot',
         image: require('../../../../../assets/img/brand-partners/TOSOT.jpeg')
     },
-    {
-        name: 'niagara',
-        image: require('../../../../../assets/img/brand-partners/niagara.gif')
-    },
-    {
-        name: 'sanden',
-        image: require('../../../../../assets/img/brand-partners/sanden.png')
-    },
+    // {
+    //     name: 'niagara',
+    //     image: require('../../../../../assets/img/brand-partners/niagara.gif')
+    // },
+    // {
+    //     name: 'sanden',
+    //     image: require('../../../../../assets/img/brand-partners/sanden.png')
+    // },
 ]

@@ -23,9 +23,48 @@ const useStyles = makeStyles(theme => ({
       position: 'absolute',
       backgroundImage: `linear-gradient(to top, ${
         theme.palette.grey[900]
-      } 0%,${alpha(theme.palette.grey[900], 0)} 100%)`
+      } 0%,${alpha(theme.palette.grey[900], 0)} 100%)`,
     }
   },
+  title:{
+    width: '596px',
+    height: '132.2px',
+    margin: '0 0 18.8px',
+    textShadow: '2px 3px 7px rgba(0, 0, 0, 0.75)',
+    fontFamily: 'Poppins',
+    fontSize: '49px',
+    fontWeight: 'normal',
+    fontStretch: 'normal',
+    fontStyle: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: 'normal',
+    textAlign: 'left',
+    color: 'white'
+  },
+  description: {
+    width: '596px',
+    height: '132.2px',
+    margin: '0 0 18.8px',
+    textShadow: '2px 3px 7px rgba(0, 0, 0, 0.75)',
+    fontFamily: 'Poppins',
+    fontSize: '49px',
+    fontWeight: 'normal',
+    fontStretch: 'normal',
+    fontStyle: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: 'normal',
+    textAlign: 'left',
+    color: 'white',
+  },
+  viewButton: {
+    width: '176px',
+    height: '42px',
+    margin: '18.8px 420px 0 0',
+    padding: '9px 36px 8px',
+    borderRadius: '15px',
+    border: 'solid 2px white',
+    backgroundColor: 'rgba(0, 0, 0, 0.15)'
+  }
   
 }));
 
@@ -63,17 +102,17 @@ function SlideItem({ item, isActive }) {
         <MotionContainer open={isActive}>
           <Box sx={{ maxWidth: 480, color: 'white' }}>
             <motion.div variants={varFadeInRight}>
-              <Typography variant="h3" gutterBottom>
+              <Typography className={classes.title} variant="h3" gutterBottom>
                 {item.title}
               </Typography>
             </motion.div>
             <motion.div variants={varFadeInRight}>
-              <Typography variant="body2" noWrap gutterBottom>
+              <Typography className={classes.title} variant="body2" noWrap gutterBottom>
                 {item.description}
               </Typography>
             </motion.div>
             <motion.div variants={varFadeInRight}>
-              <Button variant="contained" sx={{ mt: 3 }}>
+              <Button className={classes.viewButton} variant="contained" sx={{ mt: 3 }}>
                 View More
               </Button>
             </motion.div>

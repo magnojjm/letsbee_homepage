@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Logo from '~/components/Logo';
 import { Link as ScrollLink } from 'react-scroll';
 import { makeStyles } from '@material-ui/core/styles';
-import { Link, Container, Typography } from '@material-ui/core';
+import { Link, Container, Typography, Grid } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
@@ -33,9 +33,7 @@ function Footer({ className }) {
         </ScrollLink>
 
         <Typography variant="caption">
-          letsbeelife © All rights reserved 2021
-          {/* <br /> Made by &nbsp;
-          <Link href="https://minimals.cc/">minimals.cc</Link> */}
+          Let's Bee 2021 © All rights reserved
         </Typography>
       </Container>
     </div>

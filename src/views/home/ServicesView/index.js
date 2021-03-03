@@ -1,9 +1,13 @@
 import React from 'react';
 import Page from '~/components/Page';
 import Footer from '../Footer';
+import Services from './Services';
+import Partners from '../PartnersView';
+import About from './About';
+import Minimal from './Minimal';
 import { makeStyles } from '@material-ui/core/styles';
-import Partners from './Partners';
 import { Box } from '@material-ui/core';
+
 // ----------------------------------------------------------------------
 
 const useStyles = makeStyles(theme => ({
@@ -17,17 +21,21 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-  function PartnersView() {
+  function ServicesView() {
       const classes = useStyles();
 
       return (
-        <Page title="Let's Bee | Partners" id="move_top" className={classes.root}>
-            <Box mt={2}>
+        <Page title="Let's Bee | Services" id="move_top" className={classes.root}>
+            <Box 
+            >
+              <Services />
+              <About />
               <Partners />
             </Box>
-            {/* <Footer /> */}
+            {/* <Minimal /> */}
+            <Footer />
         </Page>
       );
   }
 
-  export default PartnersView;
+  export default ServicesView;

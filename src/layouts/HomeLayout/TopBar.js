@@ -23,7 +23,8 @@ import {
   MenuItem,
   Container,
   ListItemText,
-  ListItemIcon
+  ListItemIcon,
+  Typography
 } from '@material-ui/core';
 import { MIconButton } from '~/@material-extend';
 
@@ -34,8 +35,10 @@ const MENU_LINKS = [
   // { title: 'Components', icon: roundStreetview, href: PATH_HOME.components },
   // { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard },
   // { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root }
-  { title: 'About Us', icon: homeFill, href: '/'},
+  { title: 'Services', icon: roundStreetview, href: '/'},
+  { title: 'About Us', icon: homeFill, href: '/about'},
   { title: 'Partner With Us', icon: roundStreetview, href: '/partners'}
+  
 ];
 
 const APP_BAR_MOBILE = 64;
@@ -44,8 +47,18 @@ const APP_BAR_DESKTOP = 96;
 const useStyles = makeStyles(theme => ({
   root: {
     boxShadow: 'none',
-    background:'#fcb200'
+    background:'#4a4b57',
+    // width: '1920px',
+    // height:'109px',
+    // margin: '0 0 124px',
+    // padding: '13px 92px 14px 57px',
+    // backgroundColor: 'rgba(0, 0, 0, 0.54)',
   },
+  // topBarLogo: {
+  //   width: '314px',
+  //   height: '82px',
+  //   margin: '0 190px 0 0'
+  // },
   toolbar: {
     height: APP_BAR_MOBILE,
     transition: theme.transitions.create(['height', 'background-color'], {
@@ -54,13 +67,14 @@ const useStyles = makeStyles(theme => ({
     }),
     [theme.breakpoints.up('md')]: {
       height: APP_BAR_DESKTOP
-    }
+    },
+    padding: "0 30px 10px"
   },
   toolbarContainer: {
     lineHeight: 0,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-around'
   },
   toolbarShadow: {
     left: 0,
@@ -173,9 +187,13 @@ function TopBar() {
       className={clsx(classes.root, { [classes.onScroll]: offset })}
     >
       <Toolbar disableGutters className={classes.toolbar}>
-        <Container maxWidth="lg" className={classes.toolbarContainer}>
+        {/* <Container maxWidth="lg" className={classes.toolbarContainer}> */}
           <RouterLink to="/">
-            <Logo />
+            <Box component="span" display="block">
+              <img src="/static/logoR.png" />
+              {/* <Typography display={{ xs: 'none', md: 'block', lg: 'block' }} style={{color: "white"}}>
+              </Typography> */}
+            </Box>
           </RouterLink>
           <Box sx={{ flexGrow: 1 }} />
 
@@ -185,7 +203,7 @@ function TopBar() {
             underline="none"
             variant="contained"
             component={Link}
-            href={PATH_HOME.purchase}
+            href={PATH_HOME.dashboard}
           >
             Login
           </Button>
@@ -202,7 +220,7 @@ function TopBar() {
             </MIconButton>
             {renderMenuMobile}
           </Hidden>
-        </Container>
+        {/* </Container> */}
       </Toolbar>
       {offset && <span className={classes.toolbarShadow} />}
     </AppBar>

@@ -1,8 +1,8 @@
 import { pxToRem, responsiveFontSizes } from '~/utils/formatFontSize';
 
 // ----------------------------------------------------------------------
-
-const FONT_PRIMARY = 'Be Vietnam, sans-serif'; // Google Font
+const FONT_PRIMARY = 'Poppins, sans-serif'; // Google Font
+// const FONT_PRIMARY = 'Be Vietnam, sans-serif'; // Google Font
 // const FONT_SECONDARY = 'CircularStd, sans-serif'; // Local Font
 
 const Typography = {
