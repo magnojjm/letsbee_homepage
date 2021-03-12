@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../../../Minimal_Material_Kit_v1.1.0"
 		}
 	],
 	"settings": {}

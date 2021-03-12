@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from '~/components/Page';
-import Footer from '../Footer';
+import Footer from '../LandingPageView/Footer';
 import Services from './Services';
 import Partners from '../PartnersView';
 import About from './About';

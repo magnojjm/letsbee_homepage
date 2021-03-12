@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "white",
   },
   map: {
-    width: "448px", height: "370px", flexGrow: "0", margin: "0 0 0 230px"},
+    width: "448px", height: "370px", flexGrow: "0", margin: "0 0 0 330px"},
   logo: {
     width: "250px", 
     height: "47.1px", 
@@ -76,9 +76,8 @@ function Footer({ className }) {
   return (
     <div className={clsx(classes.root, className)}>
       <div className={classes.content}>
-     
-          <Grid container direction="row" style={{display: "flex", alignItems: "center", justifyContent:"space-between"}} > 
-              <Grid xs={12} lg={3}>
+          <Grid container direction="row"> 
+              <Grid style={{display: "flex", alignItems: "center"}} lg={3}>
                   {/* <ScrollLink to="move_top" spy={true} smooth={true}></ScrollLink> */}
                   <Grid >
                     {/* <Logo  className={classes.logo}/> */}
@@ -93,7 +92,8 @@ function Footer({ className }) {
                       </Typography>
                     </Grid>
                 </Grid>
-                <Grid xs={12} lg={3} >
+                <Grid xs={12} lg={3}>
+                  <Box mt={2}/>
                     <Typography 
                     className="Contact"><span >Contact Information</span>
                     </Typography> 
@@ -110,7 +110,7 @@ function Footer({ className }) {
                         </div>
                       </div>
                 </Grid>
-                <Grid className={classes.map} item  xs={12} lg={3}>
+                <Grid className={classes.map} item  lg={3}>
                   <img src="/static/mapVector.png" />
               </Grid>
             </Grid>

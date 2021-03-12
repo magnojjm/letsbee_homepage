@@ -35,6 +35,7 @@ const MENU_LINKS = [
   // { title: 'Components', icon: roundStreetview, href: PATH_HOME.components },
   // { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard },
   // { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root }
+  { title: 'Home', icon: roundStreetview, href: '/'},
   { title: 'Services', icon: roundStreetview, href: '/'},
   { title: 'About Us', icon: homeFill, href: '/about'},
   { title: 'Partner With Us', icon: roundStreetview, href: '/partners'}
@@ -46,19 +47,32 @@ const APP_BAR_DESKTOP = 96;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    boxShadow: 'none',
-    background:'#4a4b57',
-    // width: '1920px',
-    // height:'109px',
-    // margin: '0 0 124px',
-    // padding: '13px 92px 14px 57px',
-    // backgroundColor: 'rgba(0, 0, 0, 0.54)',
+    width: "1920px",
+    height: "72px",
+    padding: "14.5px 187px 13.5px",
+    backgroundColor: "#fedc3e",
   },
   // topBarLogo: {
   //   width: '314px',
   //   height: '82px',
   //   margin: '0 190px 0 0'
   // },
+  loginButton: {
+    width: "104px",
+    height: "44px",
+    flexGrow: "0",
+    margin: "0 0 0 32px",
+    padding: "9px 13px 8px",
+    borderRadius: "11px",
+    backgroundColor: "#cbb031",
+  },
+  onClick: {
+    width: "138px",
+    height: "72px",
+    flexGrow: "0",
+    padding: "23px 17px 22px 16px",
+    backgroundColor: "#efc11e",
+  },
   toolbar: {
     height: APP_BAR_MOBILE,
     transition: theme.transitions.create(['height', 'background-color'], {
@@ -74,7 +88,7 @@ const useStyles = makeStyles(theme => ({
     lineHeight: 0,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around'
+    justifyContent: 'space-between'
   },
   toolbarShadow: {
     left: 0,
@@ -96,7 +110,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   isDesktopActive: {
-    color: `${theme.palette.primary.main} !important`
+    // color: `${theme.palette.primary.main} !important`
+    color: `#fff !important`
   },
   mobileMenu: {
     color: theme.palette.text.secondary
@@ -110,15 +125,15 @@ const useStyles = makeStyles(theme => ({
     )
   },
   isHome: { color: theme.palette.common.white },
-  onScroll: {
-    '& $toolbar': {
-      backgroundColor: theme.palette.background.default
-    },
-    '& $isHome': { color: theme.palette.text.primary },
-    [theme.breakpoints.up('md')]: {
-      '& $toolbar': { height: APP_BAR_DESKTOP - 20 }
-    }
-  }
+  // onScroll: {
+  //   '& $toolbar': {
+  //     backgroundColor: theme.palette.background.default
+  //   },
+  //   '& $isHome': { color: theme.palette.text.primary },
+  //   [theme.breakpoints.up('md')]: {
+  //     '& $toolbar': { height: APP_BAR_DESKTOP - 20 }
+  //   }
+  // }
 }));
 
 // ----------------------------------------------------------------------
@@ -187,10 +202,10 @@ function TopBar() {
       className={clsx(classes.root, { [classes.onScroll]: offset })}
     >
       <Toolbar disableGutters className={classes.toolbar}>
-        {/* <Container maxWidth="lg" className={classes.toolbarContainer}> */}
+        <Container maxWidth="lg" className={classes.toolbarContainer}>
           <RouterLink to="/">
             <Box component="span" display="block">
-              <img src="/static/logoR.png" />
+              <img src="/static/logo.png" />
               {/* <Typography display={{ xs: 'none', md: 'block', lg: 'block' }} style={{color: "white"}}>
               </Typography> */}
             </Box>
@@ -200,6 +215,7 @@ function TopBar() {
           <Hidden mdDown>{renderMenuDesktop}</Hidden>
 
           <Button
+            className={classes.loginButton}
             underline="none"
             variant="contained"
             component={Link}
@@ -220,7 +236,7 @@ function TopBar() {
             </MIconButton>
             {renderMenuMobile}
           </Hidden>
-        {/* </Container> */}
+        </Container>
       </Toolbar>
       {offset && <span className={classes.toolbarShadow} />}
     </AppBar>
