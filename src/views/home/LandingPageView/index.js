@@ -11,6 +11,7 @@ import CleanInterfaces from './CleanInterfaces';
 import HugePackElements from './HugePackElements';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core'
+import ServicesView from '../ServicesView';
 // ----------------------------------------------------------------------
 
 const useStyles = makeStyles(theme => ({
@@ -28,14 +29,15 @@ function LandingPageView() {
   const classes = useStyles();
 
   return (
-    <Page title="Minimal | Home" id="move_top" className={classes.root}>
+    <Page title="Let's Bee | Home" id="move_top" className={classes.root}>
       {/* <Hero /> */}
       <div className={classes.content}>
       {/* <DarkMode /> */}
-        <Box mt={2}>
-        <About />
+      
+        <Box>
+        <ServicesView />
         </Box>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Page>
   );

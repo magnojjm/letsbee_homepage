@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from '~/components/Page';
-import Footer from '../LandingPageView/Footer';
+import Footer from '../Footer';
 import Services from './Services';
 import Partners from '../PartnersView';
 import About from './About';
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     content: {
       overflow: 'hidden',
       position: 'relative',
-      backgroundColor: theme.palette.background.white
+      // backgroundColor: theme.palette.background.white
     }
   }));
 

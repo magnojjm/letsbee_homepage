@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => {
 
   return {
   root: {
-    padding: '96px 0px 0px 0px',
+    padding: '72px 0px 0px 0px',
     backgroundColor: '#fff'
     // width: '100%',
     // height: '100%',
@@ -142,29 +142,29 @@ const spring = {
 
 // ----------------------------------------------------------------------
 
-const getImgLight = width =>
-  `${BASE_IMG}w_${width}/v1611474139/upload_minimal/home/lightmode.png`;
+// const getImgLight = width =>
+//   `${BASE_IMG}w_${width}/v1611474139/upload_minimal/home/lightmode.png`;
 
-const getImgDark = width =>
-  `${BASE_IMG}w_${width}/v1611474139/upload_minimal/home/darkmode.png`;
+// const getImgDark = width =>
+//   `${BASE_IMG}w_${width}/v1611474139/upload_minimal/home/darkmode.png`;
 
-function ToggleSwitch({ darkMode, onToggleTheme }) {
-  const classes = useStyles();
-  return (
-    <MuiThemeProvider theme={theme}>
-    <div
-      onClick={onToggleTheme}
-      className={clsx(classes.switch, { [classes.switchOn]: darkMode })}
-    >
-      <motion.div
-        layout
-        transition={spring}
-        className={clsx(classes.handle, { [classes.handleOn]: darkMode })}
-      />
-    </div>
-    </MuiThemeProvider>
-  );
-}
+// function ToggleSwitch({ darkMode, onToggleTheme }) {
+//   const classes = useStyles();
+//   return (
+//     <MuiThemeProvider theme={theme}>
+//     <div
+//       onClick={onToggleTheme}
+//       className={clsx(classes.switch, { [classes.switchOn]: darkMode })}
+//     >
+//       <motion.div
+//         layout
+//         transition={spring}
+//         className={clsx(classes.handle, { [classes.handleOn]: darkMode })}
+//       />
+//     </div>
+//     </MuiThemeProvider>
+//   );
+// }
 
 ServiceHelps.propTypes = {
   className: PropTypes.string
@@ -184,7 +184,6 @@ function ServiceHelps({ className }) {
           alt="image shape"
           src="/static/images/shape.svg"
           sx={{
-            
             top: 0,
             right: 0,
             bottom: 0,
@@ -204,11 +203,7 @@ function ServiceHelps({ className }) {
               >
           
           <CarouselAnimation carousels={CAROUSELS} />
-
-
               </MotionInView>
- 
-           
           </Grid>
            
         </Grid>

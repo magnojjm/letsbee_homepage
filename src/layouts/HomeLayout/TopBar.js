@@ -36,7 +36,7 @@ const MENU_LINKS = [
   // { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard },
   // { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root }
   { title: 'Home', icon: roundStreetview, href: '/'},
-  { title: 'Services', icon: roundStreetview, href: '/'},
+  { title: 'Services', icon: roundStreetview, href: '/services'},
   { title: 'About Us', icon: homeFill, href: '/about'},
   { title: 'Partner With Us', icon: roundStreetview, href: '/partners'}
   
@@ -124,7 +124,7 @@ const useStyles = makeStyles(theme => ({
       theme.palette.action.selectedOpacity
     )
   },
-  isHome: { color: theme.palette.common.white },
+  isHome: { color: theme.palette.common.black },
   // onScroll: {
   //   '& $toolbar': {
   //     backgroundColor: theme.palette.background.default

@@ -1,60 +1,47 @@
 import clsx from 'clsx';
 import React from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import { PATH_HOME } from '~/routes/paths';
 import { BASE_IMG } from '~/utils/getImages';
 import { Link as RouterLink } from 'react-router-dom';
 import useBreakpoints from '~/hooks/useBreakpoints';
 import {
+  varFadeInDown,
   varFadeInUp,
   MotionInView,
   varFadeInRight
 } from '~/components/Animate';
 import { alpha, makeStyles, useTheme } from '@material-ui/core/styles';
-import { Button, Box, Grid, Container, Typography } from '@material-ui/core';
-
+import { Link, Box, Grid, Container, Typography } from '@material-ui/core';
+import { MButton } from '~/@material-extend';
 // ----------------------------------------------------------------------
 
 const useStyles = makeStyles(theme => ({
   root: {
-    // padding: theme.spacing(15, 0),
-    // backgroundImage:
-    //   theme.palette.mode === 'light'
-    //     ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${
-    //         theme.palette.grey[300]
-    //       } 100%)`
-    //     : 'none',
-    // height: "540px",
     padding: "0 0 0 0",
-    // backgroundColor: "var(--white)",
+    position: 'relative',
+    backgroundColor: '#F2F3F5',
+    [theme.breakpoints.up('xl')]: {
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100vh',
+      display: 'flex',
+      position: 'fixed',
+      alignItems: 'center'
+    }
   },
   content: {
-    // maxWidth: 520,
-    // margin: 'auto',
-    // textAlign: 'center',
-    // marginBottom: theme.spacing(10),
-    // [theme.breakpoints.up('md')]: {
-    //   height: '100%',
-    //   marginBottom: 0,
-    //   textAlign: 'left',
-    //   display: 'inline-flex',
-    //   flexDirection: 'column',
-    //   alignItems: 'flex-start',
-    //   justifyContent: 'center',
-    //   paddingRight: theme.spacing(5)
-    // }
-    maxWidth: "1920px",
     [theme.breakpoints.up('md')]: {
       height: '100%',
-    padding: "0 0 0px 187px",
     backgroundColor: "var(--white)",
     }
   },
   titleAbout: {
     width: "268px",
     height: "87px",
-    margin: "57px 504px 45px 0",
-    fontFamily: "Poppins",
+    margin: "57px 0px 0px 0",
     fontSize: "48px",
     fontWeight: "bold",
     fontStretch: "normal",
@@ -67,15 +54,18 @@ const useStyles = makeStyles(theme => ({
   underline: {
     width: "58px",
     height: "17px",
-    margin: "136px 714px 36px 0",
+    margin: "-25px 0px 0px 25px",
     borderRadius: "4px",
     backgroundColor: "#fccf00",
   },
   textAbout: {
-    width: "1015px",
-    height: "261px",
-    margin: "36px 707px 90px 11px",
-    fontFamily: "Poppins",
+
+    [theme.breakpoints.down('md')]: {
+      maxWidth: "100%",
+    }, 
+    
+    margin: "26px 250px 0px 25px",
+    maxWidth: "50%",
     fontSize: "48px",
     fontWeight: "bold",
     fontStretch: "normal",
@@ -84,13 +74,15 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: "normal",
     textAlign: "left",
     color: "#000000",
+    position: "absolute", zIndex: "999",
   },
   vector: {
     width: "961px",
-    height: "540px",
+    height: "533px",
     flexGrow: "0",
     margin: "0 0 0px",
     padding: "0 0 121px 111.2px",
+    position: "relative", display: "inline-block"
     // backgroundColor: "rgba(252, 208, 0, 0.3)",
   },
   vector1: {
@@ -131,7 +123,7 @@ const useStyles = makeStyles(theme => ({
       bottom: 40,
       transform: 'translateX(32%)'
     }
-  }
+  },
 }));
 
 const variantScreenLeftMoblie = {
@@ -164,41 +156,33 @@ AboutHelps.propTypes = {
 
 function AboutHelps({ className }) {
   const classes = useStyles();
-  const theme = useTheme();
-  const upSm = useBreakpoints('up', 'sm');
-  const upMd = useBreakpoints('up', 'md');
-  const textAnimate = upMd ? varFadeInRight : varFadeInUp;
-  const screenLeftAnimate = upSm ? variantScreenLeft : variantScreenLeftMoblie;
-  const screenCenterAnimate = variantScreenCenter;
-  const screenRightAnimate = upSm
-    ? variantScreenRight
-    : variantScreenRightMobile;
-
-  // const getImg = (width, index) =>
-  //   `${BASE_IMG}w_${width}/v1611472901/upload_minimal/home/screen_${
-  //     theme.palette.mode === 'light' ? 'light' : 'dark'
-  //   }_${index + 1}.png`;
 
   return (
     <div className={classes.root}>
-    <div className={clsx(classes.content, className)}>
-      <Container maxWidth="xl">
+    <div className={clsx(className)}>
+      <Container maxWidth="lg">
+      <div className={classes.content}>
         <Grid container>
           <Grid item xs={12} md={4} lg={5} >
-            <div >
-              <MotionInView variants={textAnimate}>
+            {/* <div className={classes.content}> */}
+            <motion.div variants={varFadeInRight}>
                 <Typography variant="h2" paragraph className={classes.titleAbout}>
                   About Us
                 </Typography>
-                
-              </MotionInView>
-
-              <MotionInView variants={textAnimate}>
-                <Typography color="textSecondary" className={classes.textAbout}>
-                Lorem ipsum dolor sit amet, cons, ectetur adipiscing elit, sed do eiu smod tempor incidid.
+                <Typography variant="h1" paragraph className={classes.underline}>
                 </Typography>
-              </MotionInView>
-            </div>
+            </motion.div>
+
+            <motion.div variants={varFadeInRight}>
+              <Box
+                component="p" sx={{ color: 'common.white', py: 5 }}
+                >
+                <Typography className={classes.textAbout}>
+                  Lorem ipsum dolor sit amet, cons, ectetur adipiscing elit, sed do eiu smod tempor incidid.
+                  </Typography>
+              </Box>
+            </motion.div>
+            {/* </div> */}
           </Grid>
           <Grid item xs={12} md={4} lg={7} >
               <div className={classes.vector}>
@@ -237,12 +221,14 @@ function AboutHelps({ className }) {
               </div>
           </Grid>
           
-        </Grid>
+        </Grid></div>
         </Container>
+        
     </div>
-          <Grid item  style={{padding: 0}}>
-            <img src="/static/galleryPic.png" />
-          </Grid>
+      <Grid item  style={{padding: 0}}>
+        <img src="/static/galleryPic.png" />
+      </Grid>
+      
     </div>
   );
 }

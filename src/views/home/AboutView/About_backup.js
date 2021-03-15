@@ -252,7 +252,62 @@ function AboutHelps({ className }) {
       </Grid>
           {/* -------------------------- */}
           {/* section 3 columns */}
-
+        <Container maxWidth="xl" className={classes.sectionTwo}>
+        <div className={classes.container}>
+          {/* <Box
+            sx={{
+              pl: { md: 10 },
+              textAlign: { xs: 'center', md: 'left' }
+            }}
+          > */}
+           <div style={{textAlign: "center"}}>
+            <Typography variant="h2" style={{ color: 'black', textDecoration: "underline"}}>
+                Lorem ipsum dolor sit amet
+                </Typography>
+           <Box mt={5} />
+            <Grid container style={{display:"flex", justifyContent: "space-between"}}>
+              <Grid item xs={12} md={3} lg={4}>
+                  <MotionInView
+                  variants={varFadeInUp}
+                  sx={{ color: 'common.white', m: 3 }}>
+                  <img src="/static/Hassle-free-vector.png" />
+                  <Box mt={4}/>
+                  <Typography style={{ textAlign: "center", margin:"10px"}} variant="h3">
+                    <span style={{ color: 'black', textDecoration: "underline"}}>Provide hassle-free all-in-one service with reliable content</span>
+                  </Typography>
+                </MotionInView>
+              </Grid>
+              {/* <Box mr={2}/> */}
+              <Grid item xs={12} md={3} lg={4}>
+                  <MotionInView
+                  variants={varFadeInUp}
+                  sx={{ color: 'common.white', m: 4 }}
+                >
+                  <img src="/static/Community-Vector.png" />
+                  <Box mt={4}/>
+                  <Typography style={{ textAlign: "center", margin:"0px"}} variant="h3">
+                    <span style={{ color: 'black', textDecoration: "underline"}}>Contribute to the community by offering online platform to local businesses</span>
+                  </Typography>
+                </MotionInView>
+              </Grid>
+              {/* <Box mr={2}/> */}
+              <Grid item xs={12} md={3} lg={4}>
+                  <MotionInView
+                  variants={varFadeInUp}
+                  sx={{ color: 'common.white', m: 4 }}
+                >
+                  <img src="/static/Technology-Vector.png" />
+                  <Box mt={4}/>
+                  <Typography style={{ textAlign: "center", margin:"5px"}} variant="h3">
+                    <span style={{ color: 'black', textDecoration: "underline"}}>Seek and adapt to new technologies to improve our services</span>
+                  </Typography>
+                </MotionInView>
+              </Grid>
+            </Grid> 
+            </div>
+          {/* </Box> */}
+        </div>
+      </Container>
       {/* ___________________ SECTION 4*/}
       <Container maxWidth="xl" className={classes.sectionThree}>
         <div className={classes.adsSection}>
@@ -262,7 +317,12 @@ function AboutHelps({ className }) {
         </div>
         </Container>
         {/* ------- */}
-        {/* <Container maxWidth="xl" className={classes.sectionFour}>
+        <Container maxWidth="xl" className={classes.sectionFour}>
+          {/* <div >
+              <Typography variant="h2">
+              “Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt”
+              </Typography>
+          </div> */}
           <Grid style={{display:"flex", justifyContent: "space-between", alignItems: "center", padding: "100px"}}>
             <Grid item xs={6} md={6} lg={6}>
               <div style={{padding:"85px"}}>
@@ -284,7 +344,7 @@ function AboutHelps({ className }) {
             </Grid>
             <Grid item xs={6} md={6} lg={6}><img src="/static/real_estate.png" /></Grid>
           </Grid>
-        </Container> */}
+        </Container>
     </div>
   );
 }

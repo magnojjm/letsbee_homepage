@@ -7,6 +7,7 @@ import { BASE_IMG } from '~/utils/getImages';
 import { PATH_APP, PATH_HOME } from '~/routes/paths';
 import flashFill from '@iconify-icons/eva/flash-fill';
 import { Link as RouterLink } from 'react-router-dom';
+import MUIDataTable from "mui-datatables";
 import {
   varFadeIn,
   varWrapEnter,
@@ -82,7 +83,6 @@ const useStyles = makeStyles(theme => ({
 
 const getImg = width =>
   `${BASE_IMG}w_${width}/v1611472901/upload_minimal/home/hero.png`;
-
 Hero.propTypes = {
   className: PropTypes.string
 };

@@ -18,7 +18,10 @@ const useStyles = makeStyles(theme => ({
     // height: "444px",
     // margin: "0 0 0 1px",
     padding: "37px 187px 37px 186px",
-    backgroundColor: "#fad932",
+    // backgroundColor: "#fad932",
+    backgroundImage: `url("/static/2.jpg")`,
+    backgroundRepeat: "no-repeat", 
+    backgroundSize: "cover"
   },
   footerInfo: {
     width: "579px",
@@ -49,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
   }, 
   copyright: {
-    MaxWidth: "100%",
+    maxWidth: "100%",
     height: "85px",
     padding: "24px 1350px 23px 186px",
     backgroundColor: "white",
@@ -76,13 +79,10 @@ function Footer({ className }) {
   return (
     <div className={clsx(classes.root, className)}>
       <div className={classes.content}>
-     
-          <Grid container direction="row" style={{display: "flex", alignItems: "center", justifyContent:"space-between"}} > 
+          <Grid container direction="row" style={{display: "flex",  justifyContent:"space-between"}} > 
               <Grid xs={12} lg={3}>
-                  {/* <ScrollLink to="move_top" spy={true} smooth={true}></ScrollLink> */}
                   <Grid >
-                    {/* <Logo  className={classes.logo}/> */}
-                    <img className={classes.logo}src="/static/footerLogo.png" />
+                    <img className={classes.logo} src="/static/footerLogo.png" />
                     <Box mt={2}/>
                     <Typography style={{position: "absolute"}}>
                         <Icon className="social-facebook"><img src="/static/images/social/facebook.png" /></Icon>
@@ -116,7 +116,7 @@ function Footer({ className }) {
             </Grid>
             
       </div>
-        <Grid container direction="row" >
+        <Grid container  >
             <Typography className={classes.copyright}>
               Copyright © 2020 Let's Bee
             </Typography>
