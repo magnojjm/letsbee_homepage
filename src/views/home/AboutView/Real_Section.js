@@ -122,7 +122,7 @@ function Real_Section({ className }) {
 
           <Grid item xs={12} md={6} lg={6}>
             <div>
-                <img src="/static/real_estate.png" />
+                <img src={`${BASE_IMG}/v1615853572/letsbeelife/real_estate_sdc1o7.png`} />
             </div>
           </Grid>
         </Grid>

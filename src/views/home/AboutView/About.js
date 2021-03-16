@@ -149,6 +149,9 @@ const variantScreenRight = {
 const transition = { duration: 0.5, ease: 'easeOut' };
 
 // ----------------------------------------------------------------------
+const getImg = width =>
+  `${BASE_IMG}/v1615853609/letsbeelife/galleryPic_xnltm1.png`;
+
 
 AboutHelps.propTypes = {
   className: PropTypes.string
@@ -189,7 +192,7 @@ function AboutHelps({ className }) {
               <Box
                 component="img"
                 alt="image shape"
-                src="/static/Vector.svg"
+                src={`${BASE_IMG}/v1615853569/letsbeelife/Vector_vhq2td.svg`}
                 sx={{
                   position: 'absolute',
                   filter: 'opacity(48%)',
@@ -200,7 +203,7 @@ function AboutHelps({ className }) {
                 component="img"
                 className={classes.vector1}
                 alt="image shape"
-                src="/static/Vector-1.svg"
+                src={`${BASE_IMG}/v1615853567/letsbeelife/Vector-1_di6bnb.svg`}
                 sx={{
                   position: 'absolute',
                   filter: 'opacity(78%)',
@@ -211,7 +214,7 @@ function AboutHelps({ className }) {
               className={classes.vector2}
                 component="img"
                 alt="image shape"
-                src="/static/Vector-2.svg"
+                src={`${BASE_IMG}/v1615853567/letsbeelife/Vector-2_mzgzes.svg`}
                 sx={{
                   position: 'absolute',
                   filter: 'opacity(98%)',
@@ -226,7 +229,15 @@ function AboutHelps({ className }) {
         
     </div>
       <Grid item  style={{padding: 0}}>
-        <img src="/static/galleryPic.png" />
+        {/* <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853609/letsbeelife/galleryPic_xnltm1.png" /> */}
+        <motion.img
+          alt="product"
+          data-sizes="auto"
+          data-src={getImg()}
+          data-srcset={`${getImg()} 600w, ${getImg()} 960w`}
+          variants={varFadeInUp}
+          className={clsx(classes.heroImg, 'lazyload')}
+        />
       </Grid>
       
     </div>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Logo from '~/components/Logo';
 import { Link as ScrollLink } from 'react-scroll';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { BASE_IMG } from '~/utils/getImages';
 import { Box, Grid, Icon, Link, Container, Typography } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     padding: "37px 0px 37px 0px",
-    backgroundImage: `url("/static/2.jpg")`,
+    backgroundImage: `url("${BASE_IMG}/v1615853565/letsbeelife/2_gnaqqz.jpg")`,
     backgroundSize: "cover",
   },
   footerInfo: {
@@ -67,13 +67,13 @@ function Footer({ className }) {
                   <Box style={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "70px" }}>
                     <Typography>
                     <div style={{ marginBottom: "40px"}}>
-                        <img src="/static/footerLogo.png" />
+                        <img src={`${BASE_IMG}/v1615853557/letsbeelife/footerLogo_ufzdrz.png`} />
                     </div>
                     <div style={{ alignItems: "flex-start", display: "flex", justifyContent: "flex-start", marginRight: "5px" }} >
-                        <a href="#" style={{marginRight: "5px"}}><img src="/static/images/social/facebook.png" /></a>
-                        <a href="#" style={{marginRight: "5px"}}><img src="/static/images/social/Instagram.png" /></a>
-                        <a href="#" style={{marginRight: "5px"}}><img src="/static/images/social/youtube.png" /></a>
-                        <a href="#" style={{marginRight: "5px"}}><img src="/static/images/social/tiktok.png" /></a>
+                        <a href="#" style={{marginRight: "5px"}}><img src={`${BASE_IMG}/v1615853627/letsbeelife/social/facebook_d4yuvj.png`} /></a>
+                        <a href="#" style={{marginRight: "5px"}}><img src={`${BASE_IMG}/v1615853627/letsbeelife/social/Instagram_ilnjhc.png`} /></a>
+                        <a href="#" style={{marginRight: "5px"}}><img src={`${BASE_IMG}/v1615853627/letsbeelife/social/youtube_ykkwly.png`} /></a>
+                        <a href="#" style={{marginRight: "5px"}}><img src={`${BASE_IMG}/v1615853627/letsbeelife/social/tiktok_isiufu.png`} /></a>
                     </div>
                       </Typography>
                   </Box>
@@ -97,13 +97,13 @@ function Footer({ className }) {
                       </Box>
                 </Grid>
                 <Grid item  xs={12} lg={3} style={{padding:"10px" }}>
-                  <img src="/static/mapVector.png" />
+                  <img src={`${BASE_IMG}/v1615853566/letsbeelife/mapVector_qwstap.png`} />
               </Grid>
             </Grid>            
       </div>
         <Grid>
             <Typography className={classes.copyright}>
-              All Rights Reserved © 2020 Let's Bee
+              All Rights Reserved © 2021 Let's Bee
             </Typography>
         </Grid>
         

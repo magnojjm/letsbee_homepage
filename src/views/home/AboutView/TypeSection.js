@@ -5,24 +5,24 @@ import useBreakpoints from '~/hooks/useBreakpoints';
 import { varFadeInUp, varFadeInDown, MotionInView } from '~/components/Animate';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import { Grid, Card, Container, Typography } from '@material-ui/core';
-
+import { BASE_IMG } from '~/utils/getImages';
 // ----------------------------------------------------------------------
 
 const CARDS = [
   {
-    icon: '/static/Hassle-free-vector.png',
+    icon: `${BASE_IMG}/v1615853565/letsbeelife/Hassle-free-vector_y7xjo6.png`,
     title: 'Provide hassle-free all-in-one service with reliable content',
     description:
       'The set is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.'
   },
   {
-    icon: '/static/Community-Vector.png',
+    icon: `${BASE_IMG}/v1615853559/letsbeelife/Community-Vector1_cgbdeq.png`,
     title: 'Contribute to the community by offering online platform to local businesses',
     description:
       'Easy to customize and extend each component, saving you time and money.'
   },
   {
-    icon: '/static/Technology-Vector.png',
+    icon: `${BASE_IMG}/v1615853571/letsbeelife/Technology-Vector_jpitmj.png`,
     title: 'Seek and adapt to new technologies to improve our services',
     description:
       'Consistent design in colors, fonts ... makes brand recognition easy.'

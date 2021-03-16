@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Container, Typography } from '@material-ui/core';
+import { BASE_IMG } from '~/utils/getImages';
 // ----------------------------------------------------------------------
 
 const useStyles = makeStyles(theme => ({
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   sectionThree: { 
     fontSize: "60px", fontWeight: "bold", fontStretch: "normal", fontStyle: "normal", lineHeight: "normal", 
     letterSpacing: "normal", textAlign: "center", color: "#000000",
-    backgroundImage: `url("/static/1.jpg")`, backgroundRepeat: "no-repeat", backgroundSize: "cover" 
+    backgroundImage: `url("${BASE_IMG}/v1615853567/letsbeelife/1_ybc59w.jpg")`, backgroundRepeat: "no-repeat", backgroundSize: "cover" 
   },
   adsSection: {
     fontWeight: "bold", fontStretch: "normal", fontStyle: "normal", lineHeight: "normal", letterSpacing: "normal", textAlign: "center", color: "#000000",
