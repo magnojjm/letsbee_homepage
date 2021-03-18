@@ -28,13 +28,13 @@ const CARDS = [
        'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'
   },
   {
-    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Martketplace_xgobyu.png`,
+    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Booking_Icon.png`,
     title: `Marketplace`,
     description:
       'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'
   },
   {
-    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Logistics_kakhmn.png`,
+    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Logistics.png`,
     title: 'Logistics',
     description:
        'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'
