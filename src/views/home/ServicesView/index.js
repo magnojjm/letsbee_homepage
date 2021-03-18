@@ -1,10 +1,13 @@
 import React from 'react';
 import Page from '~/components/Page';
-import Footer from '../Footer';
-import Services from './Services';
-import Partners from '../PartnersView';
-import About from './About';
-import Minimal from './Minimal';
+import Footer from './Footer';
+import Services from './Services_sec1';
+import Service_sec2 from './Service_sec2';
+import Service_sec3 from './Service_sec3';
+import Service_4 from './Service_4';
+import Service_5 from './Service_5';
+import Service_6 from './Service_6';
+import Service_7 from './Service_7';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 
@@ -29,8 +32,13 @@ const useStyles = makeStyles(theme => ({
             <Box 
             >
               <Services />
-              <About />
-              <Partners />
+              <Service_sec2 />
+              <Service_sec3 />
+              <Service_4 />
+              <Service_5 />
+              <Service_6 />
+              <Service_7 />
+              {/* <Partners /> */}
             </Box>
             {/* <Minimal /> */}
             <Footer />

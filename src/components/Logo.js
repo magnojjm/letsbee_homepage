@@ -13,7 +13,7 @@ function Logo({ className, ...other }) {
     <Box
       component="img"
       alt="logo"
-      src="/static/logo.png"
+      src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853565/letsbeelife/logo.png"
       height={40}
       className={className}
       {...other}

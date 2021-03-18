@@ -178,7 +178,9 @@ function ServiceHelps({ className }) {
 
   return (
     <div className={clsx(classes.root, className)}>
-      <Container maxWidth="unset" sx={{ position: 'relative' }} className={classes.slides}>
+      <Container 
+      maxWidth="unset" 
+      sx={{ position: 'relative' }} className={classes.slides}>
         <Box
           component="img"
           alt="image shape"

@@ -6,83 +6,52 @@ import { BASE_IMG } from '~/utils/getImages';
 import { Link as RouterLink } from 'react-router-dom';
 import useBreakpoints from '~/hooks/useBreakpoints';
 import {
-  varFadeInDown,
   varFadeInUp,
   MotionInView,
   varFadeInRight
 } from '~/components/Animate';
 import { alpha, makeStyles, useTheme } from '@material-ui/core/styles';
-import { Link, Box, Grid, Container, Typography } from '@material-ui/core';
-import { MButton } from '~/@material-extend';
+import { Button, Box, Grid, Container, Typography } from '@material-ui/core';
+
 // ----------------------------------------------------------------------
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: "0 0 0 0",
-    // backgroundColor: "var(--white)",
+    padding: theme.spacing(15, 0),
+    backgroundImage:
+      theme.palette.mode === 'light'
+        ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${
+            theme.palette.grey[300]
+          } 100%)`
+        : 'none'
+  },
+  textHead: {
+    color: '#000000'
+  },
+  learnMore: {
+    width: '176px',
+    height: '35px',
+    margin: '90px 36px 0px 0px;',
+    padding: '8px 28px 7px',
+    borderRadius: '15px',
+    border: 'solid 2px #000000',
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
   },
   content: {
+    maxWidth: 520,
+    margin: 'auto',
+    textAlign: 'center',
+    marginBottom: theme.spacing(10),
     [theme.breakpoints.up('md')]: {
       height: '100%',
-    padding: "0 0 0px 187px",
-    backgroundColor: "var(--white)",
+      marginBottom: 0,
+      textAlign: 'left',
+      display: 'inline-flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      justifyContent: 'center',
+      paddingRight: theme.spacing(5)
     }
-  },
-  titleAbout: {
-    width: "268px",
-    height: "87px",
-    margin: "57px 504px 45px 0",
-    fontFamily: "Poppins",
-    fontSize: "48px",
-    fontWeight: "bold",
-    fontStretch: "normal",
-    fontStyle: "normal",
-    lineHeight: "normal",
-    letterSpacing: "normal",
-    textAlign: "center",
-    color: "#fccf00",
-  },
-  underline: {
-    width: "58px",
-    height: "17px",
-    margin: "136px 714px 36px 0",
-    borderRadius: "4px",
-    backgroundColor: "#fccf00",
-  },
-  textAbout: {
-    width: "1015px",
-    height: "261px",
-    margin: "36px 707px 90px 11px",
-    fontFamily: "Poppins",
-    fontSize: "48px",
-    fontWeight: "bold",
-    fontStretch: "normal",
-    fontStyle: "normal",
-    lineHeight: "normal",
-    letterSpacing: "normal",
-    textAlign: "left",
-    color: "#000000",
-  },
-  vector: {
-    width: "961px",
-    height: "540px",
-    flexGrow: "0",
-    margin: "0 0 0px",
-    padding: "0 0 121px 111.2px",
-    // backgroundColor: "rgba(252, 208, 0, 0.3)",
-  },
-  vector1: {
-    width: "849.8px",
-    height: "418.9px",
-    flexGrow: "0",
-    // backgroundColor: "rgba(252, 208, 0, 0.3)",
-  },
-  vector2: {
-    width: "633.5px",
-    height: "479.1px",
-    flexGrow: "0",
-    margin: "60.8px 0 0 327.5px",
-    // backgroundColor: "rgba(252, 208, 0, 0.3)",
   },
   screens: {
     position: 'relative',
@@ -109,34 +78,6 @@ const useStyles = makeStyles(theme => ({
       bottom: 40,
       transform: 'translateX(32%)'
     }
-  },
-  sectionTwo: { 
-    height: "1025px", 
-    padding: "127px 174.7px 126px 187px", 
-    backgroundColor: "var(--white)"
-  },
-  sectionThree: { 
-    width: "100%", height: "335.9px", padding: "",
-    backgroundImage: `url("/static/1.jpg")`, backgroundRepeat: "no-repeat", backgroundSize: "cover" 
-    // backgroundImage: "",
-    // backgroundColor: "#fad932"
-  },
-  e58_115:{
-    height: "99px", 
-    margin: "0 323.3px 68px 309px", 
-    fontFamily: "Poppins", 
-    fontSize: "46px", 
-    fontWeight: "bold", 
-    fontStretch: "normal", 
-    fontStyle: "normal", 
-    lineHeight: "normal", 
-    letterSpacing: "normal", 
-    color: "#000000"
-  },
-  adsSection: {
-    fontFamily: "Poppins", fontSize: "60px", 
-    fontWeight: "bold", fontStretch: "normal", fontStyle: "normal", lineHeight: "normal", letterSpacing: "normal", textAlign: "center", color: "#000000",
-    paddingTop: "100px"
   }
 }));
 
@@ -180,111 +121,33 @@ function AboutHelps({ className }) {
     ? variantScreenRight
     : variantScreenRightMobile;
 
-  // const getImg = (width, index) =>
-  //   `${BASE_IMG}w_${width}/v1611472901/upload_minimal/home/screen_${
-  //     theme.palette.mode === 'light' ? 'light' : 'dark'
-  //   }_${index + 1}.png`;
-
   return (
-    <div className={classes.root}>
-    <div className={clsx(classes.content, className)}>
-      <Container maxWidth="xl">
-        <Grid container>
-          <Grid item xs={12} md={4} lg={5} >
+    <div className={clsx(classes.root, className)}>
+      <Container maxWidth="lg">
+        <Grid container spacing={5}>
+          <Grid item xs={12} sm={4} lg={5}>
             <div >
               <MotionInView variants={textAnimate}>
-                <Typography variant="h2" paragraph className={classes.titleAbout}>
-                  About Us
-                </Typography>
-                
-              </MotionInView>
-
-              <MotionInView variants={textAnimate}>
-                <Typography color="textSecondary" className={classes.textAbout}>
-                Lorem ipsum dolor sit amet, cons, ectetur adipiscing elit, sed do eiu smod tempor incidid.
-                </Typography>
+                <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853556/letsbeelife/bee_attempt_3_os34of.png" />
               </MotionInView>
             </div>
           </Grid>
-          <Grid item xs={12} md={4} lg={7} >
-              <div className={classes.vector}>
-              <Box
-                component="img"
-                alt="image shape"
-                src="/static/Vector.svg"
-                sx={{
-                  position: 'absolute',
-                  filter: 'opacity(48%)',
-                  display: { xs: 'none', md: 'block' }
-                }}
-              />
-              <Box
-                component="img"
-                className={classes.vector1}
-                alt="image shape"
-                src="/static/Vector-1.svg"
-                sx={{
-                  position: 'absolute',
-                  filter: 'opacity(78%)',
-                  display: { xs: 'none', md: 'block' }
-                }}
-              />
-              <Box
-              className={classes.vector2}
-                component="img"
-                alt="image shape"
-                src="/static/Vector-2.svg"
-                sx={{
-                  position: 'absolute',
-                  filter: 'opacity(98%)',
-                  display: { xs: 'none', md: 'block' }
-                }}
-              />
-              </div>
-          </Grid>
-          
-        </Grid>
-        </Container>
-        
-    </div>
-      <Grid item  style={{padding: 0}}>
-        <img src="/static/galleryPic.png" />
-      </Grid>
-          {/* -------------------------- */}
-          {/* section 3 columns */}
 
-      {/* ___________________ SECTION 4*/}
-      <Container maxWidth="xl" className={classes.sectionThree}>
-        <div className={classes.adsSection}>
-            <Typography variant="h2" style={{margin:"11px"}}>
-            “Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt”
-            </Typography>
-        </div>
-        </Container>
-        {/* ------- */}
-        {/* <Container maxWidth="xl" className={classes.sectionFour}>
-          <Grid style={{display:"flex", justifyContent: "space-between", alignItems: "center", padding: "100px"}}>
-            <Grid item xs={6} md={6} lg={6}>
-              <div style={{padding:"85px"}}>
-                <Typography variant="h2">
-                    Lorem ipsum dolor sit
-                </Typography>
-                <Typography variant="h4">
-                Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt
-                </Typography>
-                <Box mt={2}/>
-                <Typography variant="h4">
-                Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt
-                </Typography>
-                <Box mt={2}/>
-                <Typography variant="h4">
-                Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt
-                </Typography>
-              </div>
-            </Grid>
-            <Grid item xs={6} md={6} lg={6}><img src="/static/real_estate.png" /></Grid>
+          <Grid item xs={12} sm={8} lg={7}>
+            <MotionInView variants={textAnimate}>
+                  <Typography className={classes.textHead} color="textSecondary" variant="h1">
+                  Let’s Bee<br />
+                  lets you get what you<br />
+                  desire on-the-fly!
+                  </Typography>
+                  <Typography variant="h3">
+                  It’s your all-in-one lifestyle platform.
+                  </Typography>
+                </MotionInView>
+                <Button className={classes.learnMore} variant="outline">Learn more</Button>
           </Grid>
-        </Container> */}
+        </Grid>
+      </Container>
     </div>
   );
 }

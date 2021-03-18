@@ -4,30 +4,16 @@ import PropTypes from 'prop-types';
 import useBreakpoints from '~/hooks/useBreakpoints';
 import { varFadeInUp, varFadeInDown, MotionInView } from '~/components/Animate';
 import { alpha, makeStyles } from '@material-ui/core/styles';
-import { Grid, Card, Container, Typography } from '@material-ui/core';
+import { Grid, Button, Card, Container, Typography } from '@material-ui/core';
+import { motion } from 'framer-motion';
+import {
+  varFadeIn,
+  // varWrapEnter,
+  // varFadeInUp,
+  // varFadeInRight
+} from '~/components/Animate';
 import { brand_partners } from '../PartnersView/components/constants/brand-partners.data'
 // ----------------------------------------------------------------------
-
-// const CARDS = [
-//   {
-//     icon: '/static/icons/ic_design.svg',
-//     title: 'UI & UX Design',
-//     description:
-//       'The set is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.'
-//   },
-//   {
-//     icon: '/static/icons/ic_code.svg',
-//     title: 'Development',
-//     description:
-//       'Easy to customize and extend each component, saving you time and money.'
-//   },
-//   {
-//     icon: '/static/brand/logo_single.svg',
-//     title: 'Branding',
-//     description:
-//       'Consistent design in colors, fonts ... makes brand recognition easy.'
-//   }
-// ];
 
 const useStyles = makeStyles(theme => {
   const isLight = theme.palette.mode === 'light';
@@ -44,6 +30,7 @@ const useStyles = makeStyles(theme => {
         0.48
       )})`
     };
+    
   };
 
   return {
@@ -54,59 +41,27 @@ const useStyles = makeStyles(theme => {
       }
     },
     heading: {
-      marginBottom: theme.spacing(10),
+      marginBottom: theme.spacing(5),
       [theme.breakpoints.up('md')]: {
-        marginBottom: theme.spacing(25)
+        marginBottom: theme.spacing(15)
       }
     },
-    card: {
-      maxWidth: 380,
-      minHeight: 440,
-      margin: 'auto',
-      textAlign: 'center',
-      padding: theme.spacing(10, 5, 0),
-      boxShadow: `-40px 40px 80px 0 ${shadowCard(0.4)}`,
-      [theme.breakpoints.up('md')]: {
-        boxShadow: 'none',
-        backgroundColor: theme.palette.grey[isLight ? 200 : 800]
-      }
+    partnerWithUs: {
+      height: '47px',
+      flexGrow: '0',
+      margin: '45px 91px 12px 141px',
+      padding: '8px 38px 7px',
+      borderRadius: '15px',
+      border: 'solid 2px #000000',
+      color: 'black',
+      backgroundColor: 'rgba(255, 255, 255, 0.15)',
     },
-    cardLeft: {
-      [theme.breakpoints.up('md')]: {
-        marginTop: -40
-      }
-    },
-    cardCenter: {
-      [theme.breakpoints.up('md')]: {
-        marginTop: -80,
-        backgroundColor: theme.palette.background.paper,
-        boxShadow: `-40px 40px 80px 0 ${shadowCard(0.4)}`,
-        '&:before': {
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: -1,
-          content: "''",
-          margin: 'auto',
-          position: 'absolute',
-          width: 'calc(100% - 40px)',
-          height: 'calc(100% - 40px)',
-          borderRadius: theme.shape.borderRadiusMd,
-          backgroundColor: theme.palette.background.paper,
-          boxShadow: `-20px 20px 40px 0 ${shadowCard(0.12)}`
-        }
-      }
-    },
-    // cardIcon: {
-    //   width: 40,
-    //   height: 40,
-    //   margin: 'auto',
-    //   marginBottom: theme.spacing(10)
-    // },
-    cardIconLeft: shadowIcon('info'),
-    cardIconCenter: shadowIcon('error'),
-    cardIconRight: shadowIcon('primary')
+    content: {
+      overflow: 'hidden',
+      position: 'relative',
+      backgroundColor: theme.palette.background.white
+    }
+   
   };
 });
 
@@ -121,19 +76,18 @@ function PartnersHelps({ className }) {
   const isDesktop = useBreakpoints('up', 'lg');
 
   return (
-    <div className={clsx(classes.root, className)}>
-      <Container maxWidth="lg">
+    <div className={clsx(classes.root, className)} style={{backgroundColor: "white"}}>
+      <Container maxWidth="lg" >
         <div className={classes.heading}>
           <MotionInView variants={varFadeInDown}>
-            <Typography variant="h2" align="center">
-              Partners
+            <Typography variant="h2" align="center" style={{color: "black"}}>
+              Partnered with businesses - big and small
             </Typography>
           </MotionInView>
         </div>
-
-        <Grid container spacing={isDesktop ? 10 : 5}>
+        <Grid container style={{display: "flex", justifyContent: 'center'}} spacing={isDesktop ? 10 : 5} >
           {brand_partners.map((card, index) => (
-            <Grid key={card.name} item xs={12} md={2}>
+            <Grid item key={card.name} xs={5} md={3} >
               <MotionInView variants={varFadeInUp}>
                 {/* <Card
                   className={clsx(classes.card, {
@@ -143,12 +97,7 @@ function PartnersHelps({ className }) {
                 > */}
                   <img
                     src={card.image}
-                    alt={card.name}
-                    className={clsx(classes.cardIcon, {
-                      [classes.cardIconLeft]: index === 0,
-                      [classes.cardIconCenter]: index === 1,
-                      [classes.cardIconRight]: index === 2
-                    })}
+                    className={classes.content}
                   />
                   {/* <Typography variant="h5" paragraph>
                     {card.title}
@@ -159,7 +108,8 @@ function PartnersHelps({ className }) {
                 {/* </Card> */}
               </MotionInView>
             </Grid>
-          ))}
+          ))}<Button className={classes.partnerWithUs}>Partner with us</Button>
+          
         </Grid>
       </Container>
     </div>

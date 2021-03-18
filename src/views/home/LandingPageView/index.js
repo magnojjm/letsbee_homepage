@@ -11,7 +11,7 @@ import CleanInterfaces from './CleanInterfaces';
 import HugePackElements from './HugePackElements';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core'
-import ServicesView from '../ServicesView';
+import Services from './Service';
 // ----------------------------------------------------------------------
 
 const useStyles = makeStyles(theme => ({
@@ -35,9 +35,11 @@ function LandingPageView() {
       {/* <DarkMode /> */}
       
         <Box>
-        <ServicesView />
+        <Services />
+        <About />
         </Box>
-        {/* <Footer /> */}
+        <Partners />
+        <Footer />
       </div>
     </Page>
   );

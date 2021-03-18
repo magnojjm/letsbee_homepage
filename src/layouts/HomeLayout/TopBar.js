@@ -205,7 +205,7 @@ function TopBar() {
         <Container maxWidth="lg" className={classes.toolbarContainer}>
           <RouterLink to="/">
             <Box component="span" display="block">
-              <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853565/letsbeelife/logo_fkcsmr.png" />
+              <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853565/letsbeelife/logo.png" />
               {/* <Typography display={{ xs: 'none', md: 'block', lg: 'block' }} style={{color: "white"}}>
               </Typography> */}
             </Box>

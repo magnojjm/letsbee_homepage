@@ -166,7 +166,7 @@ function AboutHelps({ className }) {
       <Container maxWidth="lg">
       <div className={classes.content}>
         <Grid container>
-          <Grid item xs={12} md={4} lg={5} >
+          <Grid item xs={7} md={5} lg={5} >
             {/* <div className={classes.content}> */}
             <motion.div variants={varFadeInRight}>
                 <Typography variant="h2" paragraph className={classes.titleAbout}>
@@ -187,7 +187,7 @@ function AboutHelps({ className }) {
             </motion.div>
             {/* </div> */}
           </Grid>
-          <Grid item xs={12} md={4} lg={7} >
+          <Grid item xs={7} md={7} lg={7} >
               <div className={classes.vector}>
               <Box
                 component="img"
@@ -229,11 +229,11 @@ function AboutHelps({ className }) {
         
     </div>
       <Grid item  style={{padding: 0}}>
-        {/* <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853609/letsbeelife/galleryPic_xnltm1.png" /> */}
+        {/* <img src="https://letsbeelife.s3.ap-east-1.amazonaws.com/galleryPic.png" /> */}
         <motion.img
           alt="product"
           data-sizes="auto"
-          data-src={getImg()}
+          data-src="https://letsbeelife.s3.ap-east-1.amazonaws.com/galleryPic.png"
           data-srcset={`${getImg()} 600w, ${getImg()} 960w`}
           variants={varFadeInUp}
           className={clsx(classes.heroImg, 'lazyload')}
