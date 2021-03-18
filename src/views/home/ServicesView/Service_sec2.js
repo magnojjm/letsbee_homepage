@@ -13,33 +13,36 @@ const CARDS = [
     icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/delivery_icon_cr09xx.png`,
     title: 'Delivery',
     description:
-      'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'
+      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     icon: `${BASE_IMG}/v1615942356/letsbeelife/services_page/Reservation_Icon_rupzvl.png`,
     title: `Advance Reservations`,
     description:
-      'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'
   },
   {
-    icon: `${BASE_IMG}/v1615942144/letsbeelife/services_page/Booking_Icon_bscpa6.png`,
+    icon: `${BASE_IMG}/v1615942144/letsbeelife/services_page/Booking_Icon.png`,
     title: 'Real Time Bookings',
     description:
-       'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'
+       'Adipiscing elit, sed do eiusm od tempor incididunt ut lab ore et dolore magna aliqua.'
   },
+  
+];
+const cards2 = [
   {
-    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Booking_Icon.png`,
+    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Martketplace.png`,
     title: `Marketplace`,
     description:
-      'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'
+      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Logistics.png`,
     title: 'Logistics',
     description:
-       'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'
+       'Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'
   } 
-];
+]
 
 const useStyles = makeStyles(theme => {
   const isLight = theme.palette.mode === 'light';
@@ -145,22 +148,48 @@ function Service_sec2({ className }) {
 
         <Grid container spacing={isDesktop ? 10 : 5}>
           {CARDS.map((card, index) => (
-            <Grid key={card.title} item xs={12} md={4}>
+            <Grid key={card.title} item xs={12} sm={4} md={4}>
               <MotionInView variants={varFadeInUp}>                
-              <Box style={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "70px" }}>
+              <Box style={{ alignItems: "center", display: "flex", justifyContent: "center", padding: "2.05em" }}>
                   <img 
                     src={card.icon}
                     alt={card.title}
                   /></Box>
                   <div style={{textAlign: "center"}}>
-                    <Typography style={{ textAlign: "center", margin:"30px"}} variant="h4">
+                    <Typography style={{ textAlign: "center", margin:"1em"}} variant="h3">
                         <span style={{ color: 'black'}}>{card.title}</span>
                     </Typography>
                   </div>
                   <div style={{textAlign: "center"}}>
-                    <Typography style={{ textAlign: "center", margin:"30px"}} variant="p">
+                    <Typography style={{ textAlign: "center", margin:"1em"}} variant="h6">
                         <span style={{ color: 'black'}}>{card.description}</span>
                     </Typography>
+                  </div>
+              </MotionInView>
+            </Grid>
+          ))}
+        </Grid>
+        <Grid container>
+          {cards2.map((card, index) => (
+            <Grid key={card.title} item xs={12} sm={6} md={6} >
+              <MotionInView variants={varFadeInUp}>                
+              <div style={{paddingLeft:"7rem", paddingRight: "7rem"}}>
+              <Box style={{ alignItems: "center", display: "flex", justifyContent: "center", padding: "2.05em" }}>
+                  <img 
+                    src={card.icon}
+                    alt={card.title}
+                  /></Box>
+                 
+                    <div style={{textAlign: "center"}}>
+                      <Typography style={{ textAlign: "center", margin:"1em"}} variant="h3">
+                          <span style={{ color: 'black'}}>{card.title}</span>
+                      </Typography>
+                    </div>
+                    <div style={{textAlign: "center"}}>
+                      <Typography style={{ textAlign: "center", margin:"1em"}} variant="h6">
+                          <span style={{ color: 'black'}}>{card.description}</span>
+                      </Typography>
+                    </div>
                   </div>
               </MotionInView>
             </Grid>
