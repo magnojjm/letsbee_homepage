@@ -257,13 +257,15 @@ function TopBar() {
  
         >
           <MenuItem exact
-            to="./partners"
+            to="https://partners.letsbee.ph/"
+            target="blank"
             component={RouterLink}
-            onClose={handleClosePartners} >Partners</MenuItem>
-          <MenuItem 
-            to="./"
+            onClose={handleClosePartners} ><a style={{textDecoration:"none", color:"black"}} href="https://partners.letsbee.ph">Partner</a></MenuItem>
+          <MenuItem exact
+            to="https://letsbeerider.ph"
+            target="blank"
             component={RouterLink}
-            onClose={handleClosePartners} >Riders</MenuItem>
+            onClose={handleClosePartners} ><a style={{textDecoration:"none", color:"black"}} href="https://letsbeerider.ph">Riders</a></MenuItem>
         </Menu>
 
           <Hidden mdUp>
