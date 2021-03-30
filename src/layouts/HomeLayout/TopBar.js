@@ -10,12 +10,14 @@ import roundSpeed from '@iconify-icons/ic/round-speed';
 import menu2Fill from '@iconify-icons/eva/menu-2-fill';
 import bookOpenFill from '@iconify-icons/eva/book-open-fill';
 import roundStreetview from '@iconify-icons/ic/round-streetview';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 import { makeStyles, alpha } from '@material-ui/core/styles';
 import {
   Box,
   List,
   Link,
+  Menu,
   Button,
   AppBar,
   Hidden,
@@ -34,11 +36,11 @@ const MENU_LINKS = [
   // { title: 'Home', icon: homeFill, href: '/' },
   // { title: 'Components', icon: roundStreetview, href: PATH_HOME.components },
   // { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard },
-  // { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root }
+  // { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root },
   { title: 'Home', icon: roundStreetview, href: '/'},
   { title: 'Services', icon: roundStreetview, href: '/services'},
   { title: 'About Us', icon: homeFill, href: '/about'},
-  { title: 'Partner With Us', icon: roundStreetview, href: '/partners'}
+  // { title: 'Partner With Us', icon: roundStreetview, href: '/partners'}
   
 ];
 
@@ -58,13 +60,14 @@ const useStyles = makeStyles(theme => ({
   //   margin: '0 190px 0 0'
   // },
   loginButton: {
-    width: "104px",
+    // width: "160px",
     height: "44px",
     flexGrow: "0",
-    margin: "0 0 0 32px",
-    padding: "9px 13px 8px",
-    borderRadius: "11px",
-    backgroundColor: "#cbb031",
+    padding: "9px 0px 10px",
+    color: "#000",
+    // borderRadius: "11px",
+    // backgroundColor: "#cbb031",
+    "& :active": { color: "white" },
   },
   onClick: {
     width: "138px",
@@ -145,6 +148,15 @@ function TopBar() {
   const offset = useOffSetTop(100);
   const [openMenu, setOpenMenu] = useState(false);
   const isHome = pathname === '/';
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleClickPartners = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClosePartners = () => {
+    setAnchorEl(null);
+  };
 
   const renderMenuDesktop = (
     <div className={classes.desktopMenu}>
@@ -205,9 +217,9 @@ function TopBar() {
         <Container maxWidth="lg" className={classes.toolbarContainer}>
           <RouterLink to="/">
             <Box component="span" display="block">
-              <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853565/letsbeelife/logo.png" />
-              {/* <Typography display={{ xs: 'none', md: 'block', lg: 'block' }} style={{color: "white"}}>
-              </Typography> */}
+              <Typography display={{ xs: 'none', sm: 'block'}} style={{color: "white"}}>
+                <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853565/letsbeelife/logo.png" />
+              </Typography>
             </Box>
           </RouterLink>
           <Box sx={{ flexGrow: 1 }} />
@@ -216,13 +228,43 @@ function TopBar() {
 
           <Button
             className={classes.loginButton}
-            underline="none"
-            variant="contained"
+            // variant="outlined"
             component={Link}
-            href={PATH_HOME.dashboard}
+            // href={PATH_HOME.dashboard}
+            // href='./partners'
+            aria-expanded={open ? 'true' : undefined}
+            aria-haspopup="true"
+            onClick={handleClickPartners}
           >
-            Login
+            Partner with us
           </Button>
+          
+          <Menu
+           id="demo-positioned-menu"
+           aria-labelledby="demo-positioned-button"
+           anchorEl={anchorEl}
+           open={open}
+           onClose={handleClosePartners}
+           getContentAnchorEl={null}
+           anchorOrigin={{
+             vertical: 'bottom',
+             horizontal: 'center',
+           }}
+           transformOrigin={{
+             vertical: 'top',
+             horizontal: 'center',
+           }}
+ 
+        >
+          <MenuItem exact
+            to="./partners"
+            component={RouterLink}
+            onClose={handleClosePartners} >Partners</MenuItem>
+          <MenuItem 
+            to="./"
+            component={RouterLink}
+            onClose={handleClosePartners} >Riders</MenuItem>
+        </Menu>
 
           <Hidden mdUp>
             <MIconButton

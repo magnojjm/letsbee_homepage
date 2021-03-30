@@ -86,7 +86,7 @@ function Service_7({ className }) {
                            /></Box>
                            <div style={{textAlign: "center"}}>
                                <Typography style={{ textAlign: "center", margin:"30px"}} variant="h4">
-                                   <span style={{ color: 'black'}}>Taxi</span>
+                                   <span style={{ color: 'black'}}>Logistics</span>
                                </Typography>
                            </div>
                            <div style={{textAlign: "center"}}>
