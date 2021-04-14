@@ -1,5 +1,7 @@
 export const BASE_IMG =
   'https://res.cloudinary.com/jdm01263d/image/upload';
+export const BASE_IMG_S3 =
+'https://letsbeelife.s3.ap-east-1.amazonaws.com';
 // Only Home Page
 export const getImgComponent = (width, name, mode) =>
   `${BASE_IMG}w_${width}/v1611426110/upload_minimal/components/${name}_${mode}.jpg`;

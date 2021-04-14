@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Logo from '~/components/Logo';
 import { Link as ScrollLink } from 'react-scroll';
 import { makeStyles } from '@material-ui/core/styles';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG_S3 } from '~/utils/getImages';
 import { Box, Grid, Icon, Link, Container, Typography } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     alignItems: "center",
     padding: "0px 0px 0 60px",
-    backgroundImage: `url("${BASE_IMG}/v1615963711/letsbeelife/services_page/Section_Background.png")`,
+    backgroundImage: `url("${BASE_IMG_S3}/services_page/Section_Background.png")`,
     backgroundSize: "cover",
   },
   footerInfo: {
@@ -92,8 +92,8 @@ function Footer({ className }) {
                               display: { xs: 'none', md: 'block' }
                             }}> */}
                           <div>
-                            <img style={{overflow: "hidden", display: "inline-block", marginTop: "40px", marginRight: "40px"}} src={`${BASE_IMG}/v1615964489/letsbeelife/services_page/Google_Play.png`}/>
-                            <img style={{overflow: "hidden", display: "inline-block"}} src={`${BASE_IMG}/v1615964506/letsbeelife/services_page/App_Store.png`}/> 
+                            <img style={{overflow: "hidden", display: "inline-block", marginTop: "40px", marginRight: "40px"}} src={`${BASE_IMG_S3}/services_page/Google_Play.png`}/>
+                            <img style={{overflow: "hidden", display: "inline-block"}} src={`${BASE_IMG_S3}/services_page/App_Store.png`}/> 
                             </div>
                             {/* </Box> */}
                         </div>
@@ -109,7 +109,7 @@ function Footer({ className }) {
                 
                 <Grid item xs={12} md={5} style={{paddingTop:"80px" }}>
                 <Box sx={{display: { xs: 'none', md: 'none', lg: 'block' } }}>
-                  <img src={`${BASE_IMG}/v1615961885/letsbeelife/services_page/Phone.png`} />
+                  <img src={`${BASE_IMG_S3}/services_page/Phone.png`} />
                   </Box>
               </Grid>
             </Grid>

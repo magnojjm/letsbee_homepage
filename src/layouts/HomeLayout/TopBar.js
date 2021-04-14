@@ -51,14 +51,14 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: "1920px",
     height: "72px",
-    padding: "14.5px 187px 13.5px",
+    padding: "14.5px 67px 10.5px 180.5px;",
     backgroundColor: "#fedc3e",
   },
-  // topBarLogo: {
-  //   width: '314px',
-  //   height: '82px',
-  //   margin: '0 190px 0 0'
-  // },
+  topBarLogo: {
+    width: '314px',
+    height: '50px',
+    margin: '0 0 0 0'
+  },
   loginButton: {
     // width: "160px",
     height: "44px",
@@ -85,13 +85,13 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       height: APP_BAR_DESKTOP
     },
-    padding: "0 30px 10px"
+    padding: "0 10px 10px"
   },
   toolbarContainer: {
     lineHeight: 0,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    // justifyContent: 'space-between'
   },
   toolbarShadow: {
     left: 0,
@@ -109,7 +109,7 @@ const useStyles = makeStyles(theme => ({
   desktopMenu: {
     '& > * ': {
       color: theme.palette.text.primary,
-      marginRight: `${theme.spacing(5)} !important`
+      marginRight: `${theme.spacing(2)} !important`
     }
   },
   isDesktopActive: {
@@ -214,11 +214,11 @@ function TopBar() {
       className={clsx(classes.root, { [classes.onScroll]: offset })}
     >
       <Toolbar disableGutters className={classes.toolbar}>
-        <Container maxWidth="lg" className={classes.toolbarContainer}>
+        <Container disableGutters maxWidth="xl" className={classes.toolbarContainer}>
           <RouterLink to="/">
-            <Box component="span" display="block">
-              <Typography display={{ xs: 'none', sm: 'block'}} style={{color: "white"}}>
-                <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853565/letsbeelife/logo.png" />
+            <Box component="span" display="block" className={classes.topBarLogo}>
+              <Typography display={{ md: 'none', lg: 'block'}} style={{color: "white"}}>
+                <img src="https://letsbeelife.s3.ap-east-1.amazonaws.com/logo.png" />
               </Typography>
             </Box>
           </RouterLink>

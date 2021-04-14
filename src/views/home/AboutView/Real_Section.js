@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PATH_HOME } from '~/routes/paths';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG, BASE_IMG_S3 } from '~/utils/getImages';
 import { Link as RouterLink } from 'react-router-dom';
 import useBreakpoints from '~/hooks/useBreakpoints';
 import {
@@ -122,7 +122,7 @@ function Real_Section({ className }) {
 
           <Grid item xs={12} md={6} lg={6}>
             <div>
-                <img src={`${BASE_IMG}/v1615853572/letsbeelife/real_estate_sdc1o7.png`} />
+                <img src={`${BASE_IMG_S3}/real_estate.png`} />
             </div>
           </Grid>
         </Grid>

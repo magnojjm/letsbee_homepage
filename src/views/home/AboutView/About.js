@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { PATH_HOME } from '~/routes/paths';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG, BASE_IMG_S3 } from '~/utils/getImages';
 import { Link as RouterLink } from 'react-router-dom';
 import useBreakpoints from '~/hooks/useBreakpoints';
 import {
@@ -150,7 +150,7 @@ const transition = { duration: 0.5, ease: 'easeOut' };
 
 // ----------------------------------------------------------------------
 const getImg = width =>
-  `${BASE_IMG}/v1615853609/letsbeelife/galleryPic_xnltm1.png`;
+  `${BASE_IMG_S3}/aboutuspage/galleryPic.png`;
 
 
 AboutHelps.propTypes = {
@@ -192,7 +192,7 @@ function AboutHelps({ className }) {
               <Box
                 component="img"
                 alt="image shape"
-                src={`${BASE_IMG}/v1615853569/letsbeelife/Vector_vhq2td.svg`}
+                src={`${BASE_IMG_S3}/aboutuspage/Vector.svg`}
                 sx={{
                   position: 'absolute',
                   filter: 'opacity(48%)',
@@ -203,7 +203,7 @@ function AboutHelps({ className }) {
                 component="img"
                 className={classes.vector1}
                 alt="image shape"
-                src={`${BASE_IMG}/v1615853567/letsbeelife/Vector-1_di6bnb.svg`}
+                src={`${BASE_IMG_S3}/aboutuspage/Vector-1.svg`}
                 sx={{
                   position: 'absolute',
                   filter: 'opacity(78%)',
@@ -214,7 +214,7 @@ function AboutHelps({ className }) {
               className={classes.vector2}
                 component="img"
                 alt="image shape"
-                src={`${BASE_IMG}/v1615853567/letsbeelife/Vector-2_mzgzes.svg`}
+                src={`${BASE_IMG_S3}/aboutuspage/Vector-2.svg`}
                 sx={{
                   position: 'absolute',
                   filter: 'opacity(98%)',

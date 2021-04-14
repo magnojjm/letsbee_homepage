@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Logo from '~/components/Logo';
 import { Link as ScrollLink } from 'react-scroll';
 import { makeStyles } from '@material-ui/core/styles';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG, BASE_IMG_S3 } from '~/utils/getImages';
 import { Box, Grid, Icon, Link, Container, Typography } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
@@ -67,7 +67,7 @@ function Footer({ className }) {
                   <Box style={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "70px" }}>
                     <Typography>
                     <div style={{ marginBottom: "40px"}}>
-                        <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853557/letsbeelife/footerLogo_ufzdrz.png" />
+                        <img src="https://letsbeelife.s3.ap-east-1.amazonaws.com/footerLogo.png" />
                     </div>
                     <div style={{ alignItems: "flex-start", display: "flex", justifyContent: "flex-start", marginRight: "5px" }} >
                         <a href="#" style={{marginRight: "5px"}}><img src="/static/images/social/facebook.png" /></a>
@@ -97,7 +97,7 @@ function Footer({ className }) {
                       </Box>
                 </Grid>
                 <Grid item  xs={12} lg={3} style={{padding:"10px" }}>
-                  <img src={`${BASE_IMG}/v1615853566/letsbeelife/mapVector_qwstap.png`} />
+                  <img src={`${BASE_IMG_S3}/mapVector.png`} />
               </Grid>
             </Grid>            
       </div>

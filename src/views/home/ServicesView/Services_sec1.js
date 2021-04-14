@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import React, { useCallback } from 'react';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG, BASE_IMG_S3 } from '~/utils/getImages';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '~/redux/slices/dark-mode';
 import useBreakpoints from '~/hooks/useBreakpoints';
@@ -128,7 +128,7 @@ ServiceHelps.propTypes = {
 };
 
 const getImg = width =>
-  `${BASE_IMG}/v1615941742/letsbeelife/services_page/Section_1_qbrdh8.png`;
+  `${BASE_IMG_S3}/services_page/Section_1_qbrdh8.png`;
 
 function ServiceHelps({ className }) {
   const classes = useStyles();
@@ -146,7 +146,7 @@ function ServiceHelps({ className }) {
           <motion.img
             alt="product"
             data-sizes="auto"
-            data-src="https://letsbeelife.s3.ap-east-1.amazonaws.com/galleryPic.png"
+            data-src={`${BASE_IMG_S3}/galleryPic.png`}
             data-srcset={`${getImg()} 600w, ${getImg()} 960w`}
             variants={varFadeInUp}
             className={clsx(classes.heroImg, 'lazyload')}

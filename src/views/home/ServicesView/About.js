@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PATH_HOME } from '~/routes/paths';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG_S3 } from '~/utils/getImages';
 import { Link as RouterLink } from 'react-router-dom';
 import useBreakpoints from '~/hooks/useBreakpoints';
 import {
@@ -128,7 +128,7 @@ function AboutHelps({ className }) {
           <Grid item xs={12} sm={4} lg={5}>
             <div >
               <MotionInView variants={textAnimate}>
-                <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853556/letsbeelife/bee_attempt_3_os34of.png" />
+                <img src={`${BASE_IMG_S3}/bee_attempt_3.png`} />
               </MotionInView>
             </div>
           </Grid>

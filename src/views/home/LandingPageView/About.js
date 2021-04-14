@@ -128,7 +128,7 @@ function AboutHelps({ className }) {
           <Grid item xs={12} sm={4} lg={5}>
             <div >
               <MotionInView variants={textAnimate}>
-                <img src="https://res.cloudinary.com/jdm01263d/image/upload/v1615853556/letsbeelife/bee_attempt_3_os34of.png" />
+                <img src="https://letsbeelife.s3.ap-east-1.amazonaws.com/bee_attempt_3.png" />
               </MotionInView>
             </div>
           </Grid>

@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PATH_HOME } from '~/routes/paths';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG_S3 } from '~/utils/getImages';
 import { Link as RouterLink } from 'react-router-dom';
 import useBreakpoints from '~/hooks/useBreakpoints';
 import {
@@ -58,7 +58,7 @@ function Service_6({ className }) {
                           <MotionInView variants={varFadeInUp}>                
                               <Box style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                   <img 
-                                      src={`${BASE_IMG}/v1615961922/letsbeelife/services_page/HS_Icon.png`}
+                                      src={`${BASE_IMG_S3}/services_page/HS_Icon.png`}
                                       alt="Home shopping"
                                   /></Box>
                                   <div style={{textAlign: "center"}}>
@@ -82,7 +82,7 @@ function Service_6({ className }) {
                         <MotionInView variants={varFadeInUp}>                
                             <Box style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                 <img 
-                                    src={`${BASE_IMG}/v1615961890/letsbeelife/services_page/PL_Icon.png`}
+                                    src={`${BASE_IMG_S3}/services_page/PL_Icon.png`}
                                     alt="Pre-Loved"
                                 /></Box>
                                 <div style={{textAlign: "center"}}>
@@ -106,7 +106,7 @@ function Service_6({ className }) {
                         <MotionInView variants={varFadeInUp}>                
                             <Box style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                 <img 
-                                    src={`${BASE_IMG}/v1615949195/letsbeelife/services_page/car_rental_icon_a1jofp.png`}
+                                    src={`${BASE_IMG_S3}/services_page/car_rental_icon_a1jofp.png`}
                                     alt="Food"
                                 /></Box>
                                 <div style={{textAlign: "center"}}>
@@ -130,7 +130,7 @@ function Service_6({ className }) {
                         <MotionInView variants={varFadeInUp}>                
                             <Box style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                 <img 
-                                    src={`${BASE_IMG}/v1615961846/letsbeelife/services_page/Real_Estate_Icon.png`}
+                                    src={`${BASE_IMG_S3}/services_page/Real_Estate_Icon.png`}
                                     alt="Food"
                                 /></Box>
                                 <div style={{textAlign: "center"}}>
@@ -151,7 +151,7 @@ function Service_6({ className }) {
             </Grid>
 
             <Grid item xs={12} md={5} xl={5}>
-              <img src={`${BASE_IMG}/v1615946943/letsbeelife/services_page/Marketplace_Image.png`} />
+              <img src={`${BASE_IMG_S3}/services_page/Marketplace_Image.png`} />
             </Grid>
         </Grid>
       {/* </Container> */}

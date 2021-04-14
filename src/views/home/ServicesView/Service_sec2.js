@@ -5,24 +5,24 @@ import useBreakpoints from '~/hooks/useBreakpoints';
 import { varFadeInUp, varFadeInDown, MotionInView } from '~/components/Animate';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import { Box, Grid, Card, Container, Typography } from '@material-ui/core';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG_S3 } from '~/utils/getImages';
 // ----------------------------------------------------------------------
 
 const CARDS = [
   {
-    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/delivery_icon_cr09xx.png`,
+    icon: `${BASE_IMG_S3}/services_page/delivery_icon_cr09xx.png`,
     title: 'Delivery',
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
-    icon: `${BASE_IMG}/v1615942356/letsbeelife/services_page/Reservation_Icon_rupzvl.png`,
+    icon: `${BASE_IMG_S3}/services_page/Reservation_Icon_rupzvl.png`,
     title: `Advance Reservations`,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'
   },
   {
-    icon: `${BASE_IMG}/v1615942144/letsbeelife/services_page/Booking_Icon.png`,
+    icon: `${BASE_IMG_S3}/services_page/Booking_Icon.png`,
     title: 'Real Time Bookings',
     description:
        'Adipiscing elit, sed do eiusm od tempor incididunt ut lab ore et dolore magna aliqua.'
@@ -31,13 +31,13 @@ const CARDS = [
 ];
 const cards2 = [
   {
-    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Martketplace.png`,
+    icon: `${BASE_IMG_S3}/services_page/Martketplace.png`,
     title: `Marketplace`,
     description:
       'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
-    icon: `${BASE_IMG}/v1615942145/letsbeelife/services_page/Logistics.png`,
+    icon: `${BASE_IMG_S3}/services_page/Logistics.png`,
     title: 'Logistics',
     description:
        'Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'

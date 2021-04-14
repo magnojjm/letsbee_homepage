@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PATH_HOME } from '~/routes/paths';
-import { BASE_IMG } from '~/utils/getImages';
+import { BASE_IMG_S3} from '~/utils/getImages';
 import { Link as RouterLink } from 'react-router-dom';
 import useBreakpoints from '~/hooks/useBreakpoints';
 import {
@@ -98,13 +98,13 @@ function Service_sec3({ className }) {
 
   const CARDS = [
     {
-      icon: `${BASE_IMG}/v1615949134/letsbeelife/services_page/food_icon.png`,
+      icon: `${BASE_IMG_S3}/services_page/food_icon.png`,
       title: 'Food',
       description:
         'The set is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.'
     },
     {
-      icon: `${BASE_IMG}/v1615949134/letsbeelife/services_page/grocery.png`,
+      icon: `${BASE_IMG_S3}/services_page/grocery.png`,
       title: 'Groceries',
       description:
         'Easy to customize and extend each component, saving you time and money.'
@@ -128,7 +128,7 @@ function Service_sec3({ className }) {
         <Grid container spacing={2}>
             <Grid container item xs={12} md={6} lg={5}>
                 <div>
-                    <img src={`${BASE_IMG}/v1615942354/letsbeelife/services_page/Delivery_Image_uju4ye.png`} />
+                    <img src={`${BASE_IMG_S3}/services_page/Delivery_Image_uju4ye.png`} />
                 </div>
             </Grid>
             <Grid container md={7} style={{ alignItems: "center", display: "flex", justifyContent: "center",}}>
@@ -144,7 +144,7 @@ function Service_sec3({ className }) {
                           <MotionInView variants={varFadeInUp}>                
                               <Box style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                   <img 
-                                      src={`${BASE_IMG}/v1615949134/letsbeelife/services_page/food_icon.png`}
+                                      src={`${BASE_IMG_S3}/services_page/food_icon.png`}
                                       alt="Food"
                                   /></Box>
                                   <div st0yle={{textAlign: "center"}}>
@@ -167,7 +167,7 @@ function Service_sec3({ className }) {
                               <MotionInView variants={varFadeInUp}>                
                                   <Box style={{ display: "flex", alignItems: "center", justifyContent: "center", }}>
                                       <img 
-                                          src={`${BASE_IMG}/v1615949134/letsbeelife/services_page/grocery.png`}
+                                          src={`${BASE_IMG_S3}/services_page/grocery.png`}
                                           alt="Food"
                                       /></Box>
                                       <div style={{textAlign: "center"}}>

@@ -10,14 +10,14 @@ import { Button, Grid, Card, Container, Typography } from '@material-ui/core';
 
 const CARDS = [
   {
-    icon: 'https://res.cloudinary.com/jdm01263d/image/upload/v1615942356/letsbeelife/services_page/Reservation_Icon_rupzvl.png',
+    icon: 'https://letsbeelife.s3.ap-east-1.amazonaws.com/aboutuspage/Reservation_Icon.png',
     title: 'Bee a Partner',
     href: '/partners',
     description:
     'Be one of our partners.'  
     },
   {
-    icon: 'https://res.cloudinary.com/jdm01263d/image/upload/v1615942145/letsbeelife/services_page/delivery_icon_cr09xx.png',
+    icon: 'https://letsbeelife.s3.ap-east-1.amazonaws.com/aboutuspage/delivery_icon.png',
     title: 'Bee a Rider',
     href: '/riders',
     description:
