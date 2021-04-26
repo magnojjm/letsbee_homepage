@@ -32,7 +32,11 @@ const HomeRoutes = {
       exact: true,
       path: '/about',
       component: lazy(() => import('src/views/home/AboutView'))
-      // component: lazy(() => import('src/views/home/LandingPageView'))
+    },
+    {
+      exact: true,
+      path: '/help_center',
+      component: lazy(() => import('src/views/home/HelpCenter'))
     },
     {
       component: () => <Redirect to="/404" />

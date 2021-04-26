@@ -19,7 +19,7 @@ import { MButton } from '~/@material-extend';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: "0 0 0 0",
+    padding: '0 0 0 0',
     position: 'relative',
     backgroundColor: '#F2F3F5',
     [theme.breakpoints.up('xl')]: {
@@ -35,67 +35,68 @@ const useStyles = makeStyles(theme => ({
   content: {
     [theme.breakpoints.up('md')]: {
       height: '100%',
-    backgroundColor: "var(--white)",
+      backgroundColor: 'var(--white)'
     }
   },
   titleAbout: {
-    width: "268px",
-    height: "87px",
-    margin: "57px 0px 0px 0",
-    fontSize: "48px",
-    fontWeight: "bold",
-    fontStretch: "normal",
-    fontStyle: "normal",
-    lineHeight: "normal",
-    letterSpacing: "normal",
-    textAlign: "center",
-    color: "#fccf00",
+    width: '268px',
+    height: '87px',
+    margin: '57px 0px 0px 0',
+    fontSize: '48px',
+    fontWeight: 'bold',
+    fontStretch: 'normal',
+    fontStyle: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: 'normal',
+    textAlign: 'center',
+    color: '#fccf00'
   },
   underline: {
-    width: "58px",
-    height: "17px",
-    margin: "-25px 0px 0px 25px",
-    borderRadius: "4px",
-    backgroundColor: "#fccf00",
+    width: '58px',
+    height: '17px',
+    margin: '-25px 0px 0px 25px',
+    borderRadius: '4px',
+    backgroundColor: '#fccf00'
   },
   textAbout: {
-
     [theme.breakpoints.down('md')]: {
-      maxWidth: "100%",
-    }, 
-    
-    margin: "26px 250px 0px 25px",
-    maxWidth: "50%",
-    fontSize: "48px",
-    fontWeight: "bold",
-    fontStretch: "normal",
-    fontStyle: "normal",
-    lineHeight: "normal",
-    letterSpacing: "normal",
-    textAlign: "left",
-    color: "#000000",
-    position: "absolute", zIndex: "999",
+      maxWidth: '100%'
+    },
+
+    margin: '26px 250px 0px 25px',
+    maxWidth: '50%',
+    fontSize: '48px',
+    fontWeight: 'bold',
+    fontStretch: 'normal',
+    fontStyle: 'normal',
+    lineHeight: 'normal',
+    letterSpacing: 'normal',
+    textAlign: 'left',
+    color: '#000000',
+    position: 'absolute',
+    zIndex: '999'
   },
   vector: {
-    width: "961px",
-    height: "533px",
-    flexGrow: "0",
-    margin: "0 0 0px",
-    padding: "0 0 121px 111.2px",
-    position: "relative", display: "inline-block"
+    width: '961px',
+    height: '533px',
+    flexGrow: '0',
+    margin: '0 0 0px',
+    padding: '0 0 121px 111.2px',
+    position: 'relative',
+    display: 'inline-block'
     // backgroundColor: "rgba(252, 208, 0, 0.3)",
   },
   vector1: {
-    width: "849.8px",
-    height: "418.9px",
-    flexGrow: "0",
+    width: '849.8px',
+    height: '418.9px',
+    flexGrow: '0'
     // backgroundColor: "rgba(252, 208, 0, 0.3)",
   },
   vector2: {
-    width: "633.5px",
-    height: "479.1px",
-    flexGrow: "0",
-    margin: "60.8px 0 0 327.5px",
+    width: '633.5px',
+    height: '479.1px',
+    flexGrow: '0',
+    margin: '60.8px 0 0 327.5px'
     // backgroundColor: "rgba(252, 208, 0, 0.3)",
   },
   screens: {
@@ -123,7 +124,7 @@ const useStyles = makeStyles(theme => ({
       bottom: 40,
       transform: 'translateX(32%)'
     }
-  },
+  }
 }));
 
 const variantScreenLeftMoblie = {
@@ -149,9 +150,7 @@ const variantScreenRight = {
 const transition = { duration: 0.5, ease: 'easeOut' };
 
 // ----------------------------------------------------------------------
-const getImg = width =>
-  `${BASE_IMG_S3}/aboutuspage/galleryPic.png`;
-
+const getImg = width => `${BASE_IMG_S3}/aboutuspage/galleryPic.png`;
 
 AboutHelps.propTypes = {
   className: PropTypes.string
@@ -162,73 +161,78 @@ function AboutHelps({ className }) {
 
   return (
     <div className={classes.root}>
-    <div className={clsx(className)}>
-      <Container maxWidth="lg">
-      <div className={classes.content}>
-        <Grid container>
-          <Grid item xs={7} md={5} lg={5} >
-            {/* <div className={classes.content}> */}
-            <motion.div variants={varFadeInRight}>
-                <Typography variant="h2" paragraph className={classes.titleAbout}>
-                  About Us
-                </Typography>
-                <Typography variant="h1" paragraph className={classes.underline}>
-                </Typography>
-            </motion.div>
-
-            <motion.div variants={varFadeInRight}>
-              <Box
-                component="p" sx={{ color: 'common.white', py: 5 }}
-                >
-                <Typography className={classes.textAbout}>
-                  Lorem ipsum dolor sit amet, cons, ectetur adipiscing elit, sed do eiu smod tempor incidid.
+      <div className={clsx(className)}>
+        <Container maxWidth="lg">
+          <div className={classes.content}>
+            <Grid container>
+              <Grid item xs={7} md={5} lg={5}>
+                {/* <div className={classes.content}> */}
+                <motion.div variants={varFadeInRight}>
+                  <Typography
+                    variant="h2"
+                    paragraph
+                    className={classes.titleAbout}
+                  >
+                    About Us
                   </Typography>
-              </Box>
-            </motion.div>
-            {/* </div> */}
-          </Grid>
-          <Grid item xs={7} md={7} lg={7} >
-              <div className={classes.vector}>
-              <Box
-                component="img"
-                alt="image shape"
-                src={`${BASE_IMG_S3}/aboutuspage/Vector.svg`}
-                sx={{
-                  position: 'absolute',
-                  filter: 'opacity(48%)',
-                  display: { xs: 'none', md: 'block' }
-                }}
-              />
-              <Box
-                component="img"
-                className={classes.vector1}
-                alt="image shape"
-                src={`${BASE_IMG_S3}/aboutuspage/Vector-1.svg`}
-                sx={{
-                  position: 'absolute',
-                  filter: 'opacity(78%)',
-                  display: { xs: 'none', md: 'block' }
-                }}
-              />
-              <Box
-              className={classes.vector2}
-                component="img"
-                alt="image shape"
-                src={`${BASE_IMG_S3}/aboutuspage/Vector-2.svg`}
-                sx={{
-                  position: 'absolute',
-                  filter: 'opacity(98%)',
-                  display: { xs: 'none', md: 'block' }
-                }}
-              />
-              </div>
-          </Grid>
-          
-        </Grid></div>
+                  <Typography
+                    variant="h1"
+                    paragraph
+                    className={classes.underline}
+                  ></Typography>
+                </motion.div>
+
+                <motion.div variants={varFadeInRight}>
+                  <Box component="p" sx={{ color: 'common.white', py: 5 }}>
+                    <Typography className={classes.textAbout}>
+                      Lorem ipsum dolor sit amet, cons, ectetur adipiscing elit,
+                      sed do eiu smod tempor incidid.
+                    </Typography>
+                  </Box>
+                </motion.div>
+                {/* </div> */}
+              </Grid>
+              <Grid item xs={7} md={7} lg={7}>
+                <div className={classes.vector}>
+                  <Box
+                    component="img"
+                    alt="image shape"
+                    src={`${BASE_IMG_S3}/aboutuspage/Vector.svg`}
+                    sx={{
+                      position: 'absolute',
+                      filter: 'opacity(48%)',
+                      display: { xs: 'none', md: 'block' }
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    className={classes.vector1}
+                    alt="image shape"
+                    src={`${BASE_IMG_S3}/aboutuspage/Vector-1.svg`}
+                    sx={{
+                      position: 'absolute',
+                      filter: 'opacity(78%)',
+                      display: { xs: 'none', md: 'block' }
+                    }}
+                  />
+                  <Box
+                    className={classes.vector2}
+                    component="img"
+                    alt="image shape"
+                    src={`${BASE_IMG_S3}/aboutuspage/Vector-2.svg`}
+                    sx={{
+                      position: 'absolute',
+                      filter: 'opacity(98%)',
+                      display: { xs: 'none', md: 'block' }
+                    }}
+                  />
+                </div>
+              </Grid>
+            </Grid>
+          </div>
         </Container>
-        
-    </div>
-      <Grid item  style={{padding: 0}}>
+      </div>
+      <Grid item style={{ padding: 0 }}>
         {/* <img src="https://letsbeelife.s3.ap-east-1.amazonaws.com/galleryPic.png" /> */}
         <motion.img
           alt="product"
@@ -239,7 +243,6 @@ function AboutHelps({ className }) {
           className={clsx(classes.heroImg, 'lazyload')}
         />
       </Grid>
-      
     </div>
   );
 }

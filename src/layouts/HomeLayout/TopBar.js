@@ -37,11 +37,11 @@ const MENU_LINKS = [
   // { title: 'Components', icon: roundStreetview, href: PATH_HOME.components },
   // { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard },
   // { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root },
-  { title: 'Home', icon: roundStreetview, href: '/'},
-  { title: 'Services', icon: roundStreetview, href: '/services'},
-  { title: 'About Us', icon: homeFill, href: '/about'},
-  // { title: 'Partner With Us', icon: roundStreetview, href: '/partners'}
-  
+  { title: 'Home', icon: roundStreetview, href: '/' },
+  { title: 'Services', icon: roundStreetview, href: '/services' },
+  { title: 'About Us', icon: homeFill, href: '/about' },
+  { title: 'Help Center', icon: homeFill, href: '/help_center' }
+  // { title: 'Partner With Us', icon: roundStreetview, href: '/partners'},
 ];
 
 const APP_BAR_MOBILE = 64;
@@ -49,10 +49,10 @@ const APP_BAR_DESKTOP = 96;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "1920px",
-    height: "72px",
-    padding: "14.5px 67px 10.5px 180.5px;",
-    backgroundColor: "#fedc3e",
+    width: '1920px',
+    height: '72px',
+    padding: '14.5px 67px 10.5px 180.5px;',
+    backgroundColor: '#fedc3e'
   },
   topBarLogo: {
     width: '314px',
@@ -61,20 +61,20 @@ const useStyles = makeStyles(theme => ({
   },
   loginButton: {
     // width: "160px",
-    height: "44px",
-    flexGrow: "0",
-    padding: "9px 0px 10px",
-    color: "#000",
+    height: '44px',
+    flexGrow: '0',
+    padding: '9px 0px 10px',
+    color: '#000',
     // borderRadius: "11px",
     // backgroundColor: "#cbb031",
-    "& :active": { color: "white" },
+    '& :active': { color: 'white' }
   },
   onClick: {
-    width: "138px",
-    height: "72px",
-    flexGrow: "0",
-    padding: "23px 17px 22px 16px",
-    backgroundColor: "#efc11e",
+    width: '138px',
+    height: '72px',
+    flexGrow: '0',
+    padding: '23px 17px 22px 16px',
+    backgroundColor: '#efc11e'
   },
   toolbar: {
     height: APP_BAR_MOBILE,
@@ -85,12 +85,12 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       height: APP_BAR_DESKTOP
     },
-    padding: "0 10px 10px"
+    padding: '0 10px 10px'
   },
   toolbarContainer: {
     lineHeight: 0,
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'center'
     // justifyContent: 'space-between'
   },
   toolbarShadow: {
@@ -127,7 +127,7 @@ const useStyles = makeStyles(theme => ({
       theme.palette.action.selectedOpacity
     )
   },
-  isHome: { color: theme.palette.common.black },
+  isHome: { color: theme.palette.common.black }
   // onScroll: {
   //   '& $toolbar': {
   //     backgroundColor: theme.palette.background.default
@@ -151,10 +151,16 @@ function TopBar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
-  const handleClickPartners = (event) => {
+  const handleClickPartners = event => {
     setAnchorEl(event.currentTarget);
   };
   const handleClosePartners = () => {
+    setAnchorEl(null);
+  };
+  const handleClickCenter = event => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClosePCenter = () => {
     setAnchorEl(null);
   };
 
@@ -214,10 +220,21 @@ function TopBar() {
       className={clsx(classes.root, { [classes.onScroll]: offset })}
     >
       <Toolbar disableGutters className={classes.toolbar}>
-        <Container disableGutters maxWidth="xl" className={classes.toolbarContainer}>
+        <Container
+          disableGutters
+          maxWidth="xl"
+          className={classes.toolbarContainer}
+        >
           <RouterLink to="/">
-            <Box component="span" display="block" className={classes.topBarLogo}>
-              <Typography display={{ md: 'none', lg: 'block'}} style={{color: "white"}}>
+            <Box
+              component="span"
+              display="block"
+              className={classes.topBarLogo}
+            >
+              <Typography
+                display={{ md: 'none', lg: 'block' }}
+                style={{ color: 'white' }}
+              >
                 <img src="https://letsbeelife.s3.ap-east-1.amazonaws.com/logo.png" />
               </Typography>
             </Box>
@@ -238,35 +255,52 @@ function TopBar() {
           >
             Partner with us
           </Button>
-          
+
           <Menu
-           id="demo-positioned-menu"
-           aria-labelledby="demo-positioned-button"
-           anchorEl={anchorEl}
-           open={open}
-           onClose={handleClosePartners}
-           getContentAnchorEl={null}
-           anchorOrigin={{
-             vertical: 'bottom',
-             horizontal: 'center',
-           }}
-           transformOrigin={{
-             vertical: 'top',
-             horizontal: 'center',
-           }}
- 
-        >
-          <MenuItem exact
-            to="https://partners.letsbee.ph/"
-            target="blank"
-            component={RouterLink}
-            onClose={handleClosePartners} ><a style={{textDecoration:"none", color:"black"}} href="https://partners.letsbee.ph">Partner</a></MenuItem>
-          <MenuItem exact
-            to="https://letsbeerider.ph"
-            target="blank"
-            component={RouterLink}
-            onClose={handleClosePartners} ><a style={{textDecoration:"none", color:"black"}} href="https://letsbeerider.ph">Riders</a></MenuItem>
-        </Menu>
+            id="demo-positioned-menu"
+            aria-labelledby="demo-positioned-button"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClosePartners}
+            getContentAnchorEl={null}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center'
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'center'
+            }}
+          >
+            <MenuItem
+              exact
+              to="https://partners.letsbee.ph/"
+              target="blank"
+              component={RouterLink}
+              onClose={handleClosePartners}
+            >
+              <a
+                style={{ textDecoration: 'none', color: 'black' }}
+                href="https://partners.letsbee.ph"
+              >
+                Partner
+              </a>
+            </MenuItem>
+            <MenuItem
+              exact
+              to="https://letsbeerider.ph"
+              target="blank"
+              component={RouterLink}
+              onClose={handleClosePartners}
+            >
+              <a
+                style={{ textDecoration: 'none', color: 'black' }}
+                href="https://letsbeerider.ph"
+              >
+                Riders
+              </a>
+            </MenuItem>
+          </Menu>
 
           <Hidden mdUp>
             <MIconButton
