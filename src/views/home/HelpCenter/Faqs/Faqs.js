@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
       top: 0,
       left: 0,
       width: '100%',
-      height: '68vh',
+      height: '67vh',
       alignItems: 'center'
     },
     backgroundImage: `url("${BASE_IMG_S3}/image+51.png")`,
