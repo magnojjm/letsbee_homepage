@@ -17,7 +17,8 @@ const CARDS = [
   },
   {
     icon: `${BASE_IMG_S3}/aboutuspage/Community-Vector.png`,
-    title: 'Contribute to the community by offering online platform to local businesses',
+    title:
+      'Contribute to the community by offering online platform to local businesses',
     description:
       'Easy to customize and extend each component, saving you time and money.'
   },
@@ -126,7 +127,7 @@ function TypeHelps({ className }) {
         <div className={classes.heading}>
           <MotionInView variants={varFadeInDown}>
             <Typography variant="h2" align="center">
-            Lorem ipsum dolor sit amet
+              Lorem ipsum dolor sit amet
             </Typography>
           </MotionInView>
         </div>
@@ -134,15 +135,20 @@ function TypeHelps({ className }) {
         <Grid container spacing={isDesktop ? 10 : 5}>
           {CARDS.map((card, index) => (
             <Grid key={card.title} item xs={12} md={4}>
-              <MotionInView variants={varFadeInUp}>                
-                  <img
-                    src={card.icon}
-                    alt={card.title}
-                  />
-                  <div style={{textAlign: "center"}}>
-                  <Typography style={{ textAlign: "center", margin:"30px"}} variant="h4">
-                    <span style={{ color: 'black', textDecoration: "underline"}}>{card.title}</span>
-                  </Typography></div>
+              <MotionInView variants={varFadeInUp}>
+                <img src={card.icon} alt={card.title} />
+                <div style={{ textAlign: 'center' }}>
+                  <Typography
+                    style={{ textAlign: 'center', margin: '30px' }}
+                    variant="h4"
+                  >
+                    <span
+                      style={{ color: 'black', textDecoration: 'underline' }}
+                    >
+                      {card.title}
+                    </span>
+                  </Typography>
+                </div>
               </MotionInView>
             </Grid>
           ))}

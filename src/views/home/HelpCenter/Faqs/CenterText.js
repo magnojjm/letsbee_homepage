@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import { Tabs, Tab, Avatar } from '@material-ui/core';
 import PhoneIcon from '@material-ui/icons/Phone';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
@@ -51,15 +50,6 @@ function a11yProps(index) {
   };
 }
 
-// const AntTabs = withStyles({
-//   root: {
-//     borderBottom: '1px solid #e8e8e8'
-//   },
-//   indicator: {
-//     backgroundColor: '#1890ff'
-//   }
-// })(Tabs);
-
 const CARDS = [
   {
     tabOne: {
@@ -71,14 +61,14 @@ const CARDS = [
         'The set is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.'
     },
     tabTwo: {
-      icon: `${BASE_IMG_S3}/aboutuspage/Hassle-free-vector.png`,
+      icon: `${BASE_IMG_S3}/aboutuspage/Community-Vector.png`,
       title: 'Safety',
       heading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
       description:
         'Maecenas volutpat sit amet nisl ut maximus. Vestibulum consequat dui in purus auctor tincidunt. Vestibulum sodales ante in imperdiet tristique.'
     },
     tabThree: {
-      icon: `${BASE_IMG_S3}/aboutuspage/Hassle-free-vector.png`,
+      icon: `${BASE_IMG_S3}/aboutuspage/Technology-Vector.png`,
       title: 'Customer Service',
       heading: 'Nunc id mollis odio, nec gravida felis?',
       description:
@@ -87,18 +77,6 @@ const CARDS = [
   }
 ];
 
-const StyledTabs = withStyles({
-  indicator: {
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundColor: 'transparent',
-    '& > span': {
-      maxWidth: 40,
-      width: '100%',
-      backgroundColor: 'transparent'
-    }
-  }
-})(props => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
 
 const StyledTab = withStyles(theme => ({
   root: {
@@ -116,8 +94,7 @@ const StyledTab = withStyles(theme => ({
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    height: '500px',
-    backgroundImage: `url("${BASE_IMG_S3}/1.jpg")`
+    height: '500px'
   },
   sectionThree: {
     fontSize: '60px',
@@ -141,17 +118,29 @@ const useStyles = makeStyles(theme => ({
   padding: {
     padding: theme.spacing(3)
   },
+  rectangle: {
+    width: '383px',
+    height: '329px',
+    margin: '0 54px',
+    padding: '48px 92px 23px',
+    borderRadius: '13px',
+    boxShadow: '0 0 42px -13px rgba(0, 0, 0, 0.25)',
+    backgroundColor: 'var(--white)'
+  },
   demo1: {
-    height: '500px !important',
-    backgroundImage: `url("${BASE_IMG_S3}/1.jpg") !important`,
+    height: '447px',
+    backgroundImage: `url("${BASE_IMG_S3}/1.jpg")`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    color: '#000000'
+    padding: '89px 257px 106px',
+    objectFit: 'contain',
+    backgroundColor: '#fad932'
   }
 }));
 
 export default function CustomizedTabs() {
   const classes = useStyles();
+  const classTab = StyledTab;
   const [value, setValue] = React.useState(0);
   const isDesktop = useBreakpoints('up', 'lg');
 
@@ -161,36 +150,90 @@ export default function CustomizedTabs() {
 
   return (
     <Container maxWidth="xl" className={classes.sectionThree}>
-      <Container maxWidth="md">
-        <div position="center">
-          <div classes={classes.demo1} onChange={handleChange}>
-            <Tabs
-              value={value}
-              style={{ justifyContent: 'center' }}
-              onChange={handleChange}
-            >
-              <Tab
-                icon={<PhoneIcon />}
-                label="FAQs"
-                aria-label="phone"
-                {...a11yProps(0)}
-              />
-              <Tab
-                icon={<FavoriteIcon />}
-                label="Safety"
-                aria-label="favorite"
-                {...a11yProps(1)}
-              />
-              <Tab
-                icon={<PersonPinIcon />}
-                aria-label="person"
-                label="Customer Service"
-                {...a11yProps(2)}
-              />
-            </Tabs>
-          </div>
-        </div>
-      </Container>
+      {/* <Container maxWidth="xl"> */}
+      <div className={classes.demo1} onChange={handleChange}>
+        <Grid>
+          <Tabs
+            classes={classTab.root}
+            centered={true}
+            value={value}
+            onChange={handleChange}
+          >
+            <Tab
+              label={
+                <>
+                  <div style={{ backgroundColor: '#fff' }}>
+                    {
+                      <Avatar
+                        className={classes.rectangle}
+                        style={{
+                          width: '329px',
+                          minWidth: '330px',
+                          height: '222px',
+                          margin: '0 0 6px',
+                          borderRadius: '10px'
+                        }}
+                        src={require(`/Users/jdm0126/Documents/trackerApp/new_template/letsbeeLife/src/assets/faqs.png`)}
+                      />
+                    }
+                    FAQs
+                  </div>
+                </>
+              }
+              {...a11yProps(0)}
+            />
+
+            <Tab
+              label={
+                <>
+                  <div style={{ backgroundColor: '#fff' }}>
+                    {
+                      <Avatar
+                        className={classes.rectangle}
+                        style={{
+                          width: '329px',
+                          minWidth: '330px',
+                          height: '222px',
+                          margin: '0 0 6px',
+                          borderRadius: '10px'
+                        }}
+                        src={require(`/Users/jdm0126/Documents/trackerApp/new_template/letsbeeLife/src/assets/safety.png`)}
+                      />
+                    }
+                    Safety
+                  </div>
+                </>
+              }
+              {...a11yProps(1)}
+            />
+
+            <Tab
+              label={
+                <>
+                  <div style={{ backgroundColor: '#fff' }}>
+                    {
+                      <Avatar
+                        className={classes.rectangle}
+                        style={{
+                          width: '329px',
+                          minWidth: '330px',
+                          height: '222px',
+                          margin: '0 0 6px',
+                          borderRadius: '10px'
+                        }}
+                        src={require(`/Users/jdm0126/Documents/trackerApp/new_template/letsbeeLife/src/assets/customerservice.png`)}
+                      />
+                    }
+                    Customer Service
+                  </div>
+                </>
+              }
+              {...a11yProps(2)}
+            />
+          </Tabs>
+        </Grid>
+      </div>
+      {/* </Container> */}
       <TabPanel value={value} index={0}>
         {CARDS.map(card => (
           <Container maxWidth="md">
@@ -288,10 +331,76 @@ export default function CustomizedTabs() {
                   paddingTop: '2rem'
                 }}
               >
-                {card.tabTwo.heading}
+                {card.tabTwo.title}
               </h3>
               <hr />
-              <Typography variant="p">{card.tabTwo.description}</Typography>
+              {/* <Typography variant="p">
+                Quisque ante lacus, posuere eget ultrices quis, fringilla eget
+                lorem?
+              </Typography> */}
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                  style={{ marginTop: '1rem', marginBottom: '1rem' }}
+                >
+                  <Typography className={classes.heading}>
+                    {card.tabTwo.heading}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{card.tabTwo.description}</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <hr />
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography className={classes.heading}>
+                    {card.tabTwo.heading}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{card.tabTwo.description}</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <hr />
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={classes.heading}>
+                    {card.tabThree.heading}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{card.tabThree.description}</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <hr />
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={classes.heading}>
+                    {card.tabOne.heading}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Quisque ante lacus, posuere eget ultrices quis, fringilla
+                    eget lorem?
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
               <hr />
             </div>
           </Container>
@@ -308,10 +417,76 @@ export default function CustomizedTabs() {
                   paddingTop: '2rem'
                 }}
               >
-                {card.tabThree.heading}
+                {card.tabThree.title}
               </h3>
               <hr />
-              <Typography variant="p">{card.tabOne.description}</Typography>
+              {/* <Typography variant="p">
+                Quisque ante lacus, posuere eget ultrices quis, fringilla eget
+                lorem?
+              </Typography> */}
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                  style={{ marginTop: '1rem', marginBottom: '1rem' }}
+                >
+                  <Typography className={classes.heading}>
+                    {card.tabThree.heading}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{card.tabOne.description}</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <hr />
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography className={classes.heading}>
+                    {card.tabThree.heading}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{card.tabTwo.description}</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <hr />
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={classes.heading}>
+                    {card.tabThree.heading}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{card.tabThree.description}</Typography>
+                </AccordionDetails>
+              </Accordion>
+              <hr />
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography className={classes.heading}>
+                    {card.tabOne.heading}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Quisque ante lacus, posuere eget ultrices quis, fringilla
+                    eget lorem?
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
               <hr />
             </div>
           </Container>
