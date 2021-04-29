@@ -173,7 +173,7 @@ export default function CustomizedTabs() {
                           margin: '0 0 6px',
                           borderRadius: '10px'
                         }}
-                        src={require(`/Users/jdm0126/Documents/trackerApp/new_template/letsbeeLife/src/assets/faqs.png`)}
+                        src={`${BASE_IMG_S3}/helpcenter/faqs.png`}
                       />
                     }
                     FAQs
@@ -197,7 +197,7 @@ export default function CustomizedTabs() {
                           margin: '0 0 6px',
                           borderRadius: '10px'
                         }}
-                        src={require(`/Users/jdm0126/Documents/trackerApp/new_template/letsbeeLife/src/assets/safety.png`)}
+                        src={`${BASE_IMG_S3}/helpcenter/safety.png`}
                       />
                     }
                     Safety
@@ -221,7 +221,7 @@ export default function CustomizedTabs() {
                           margin: '0 0 6px',
                           borderRadius: '10px'
                         }}
-                        src={require(`/Users/jdm0126/Documents/trackerApp/new_template/letsbeeLife/src/assets/customerservice.png`)}
+                        src={`${BASE_IMG_S3}/helpcenter/customerservice.png`}
                       />
                     }
                     Customer Service
