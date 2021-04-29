@@ -38,10 +38,9 @@ const MENU_LINKS = [
   // { title: 'Dashboard', icon: roundSpeed, href: PATH_HOME.dashboard },
   // { title: 'Documentation', icon: bookOpenFill, href: PATH_DOCS.root },
   { title: 'Home', icon: roundStreetview, href: '/' },
-  { title: 'Services', icon: roundStreetview, href: '/services' },
   { title: 'About Us', icon: homeFill, href: '/about' },
+  { title: 'Services', icon: roundStreetview, href: '/services' },
   { title: 'Help Center', icon: homeFill, href: '/help_center' }
-  // { title: 'Partner With Us', icon: roundStreetview, href: '/partners'},
 ];
 
 const APP_BAR_MOBILE = 64;
