@@ -28,6 +28,7 @@ import {
   ListItemIcon,
   Typography
 } from '@material-ui/core';
+import { BASE_IMG_S3 } from '~/utils/getImages';
 import { MIconButton } from '~/@material-extend';
 
 // ----------------------------------------------------------------------
@@ -56,7 +57,7 @@ const useStyles = makeStyles(theme => ({
   topBarLogo: {
     width: '314px',
     height: '50px',
-    margin: '0 0 0 0'
+    margin: '0 0 0 5px'
   },
   loginButton: {
     // width: "160px",
@@ -234,7 +235,7 @@ function TopBar() {
                 display={{ md: 'none', lg: 'block' }}
                 style={{ color: 'white' }}
               >
-                <img src="https://letsbeelife.s3.ap-east-1.amazonaws.com/logo.png" />
+                <img src={`${BASE_IMG_S3}/logo.png`} width="150px" />
               </Typography>
             </Box>
           </RouterLink>

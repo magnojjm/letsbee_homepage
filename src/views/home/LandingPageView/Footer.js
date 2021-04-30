@@ -61,54 +61,92 @@ function Footer({ className }) {
 
   return (
     <div className={clsx(classes.root, className)}>
-      <div className= {classes.content}>
-          <Grid container direction="row"> 
-              <Grid item xs={12} lg={4} style={{margin:"10px" }}>
-                  <Box style={{ alignItems: "center", display: "flex", justifyContent: "center", paddingTop: "70px" }}>
-                    <Typography>
-                    <div style={{ marginBottom: "40px"}}>
-                        <img src={`${BASE_IMG}/v1615853557/letsbeelife/footerLogo_ufzdrz.png`} />
-                    </div>
-                    <div style={{ alignItems: "flex-start", display: "flex", justifyContent: "flex-start", marginRight: "5px" }} >
-                        <a href="#" style={{marginRight: "5px"}}><img src={`${BASE_IMG}/v1615853627/letsbeelife/social/facebook_d4yuvj.png`} /></a>
-                        <a href="#" style={{marginRight: "5px"}}><img src={`${BASE_IMG}/v1615853627/letsbeelife/social/Instagram_ilnjhc.png`} /></a>
-                        <a href="#" style={{marginRight: "5px"}}><img src={`${BASE_IMG}/v1615853627/letsbeelife/social/youtube_ykkwly.png`} /></a>
-                        <a href="#" style={{marginRight: "5px"}}><img src={`${BASE_IMG}/v1615853627/letsbeelife/social/tiktok_isiufu.png`} /></a>
-                    </div>
-                      </Typography>
-                  </Box>
-                </Grid>
-                <Grid item xs={12} lg={4} style={{padding:"10px" }}>
-                  <Box >
-                      <div component="subtitle" display={{ xs: 'none', lg: 'block', xl: 'block' }} 
-                      className={classes.footerInfo}>                       <div>
-                      <Typography variant="h3">Contact Information </Typography> 
-                          <span>Head Office: Block 4, Lot 5, Yukon Street, <br />
-                          Riverside Subdivision, Brgy. Anunas, Angeles 
-                          City, <br />Pampanga</span>
-                          </div>
-                          <div>
-                          <Box mt={4}/>
-                          <span>Hotline: (045) 888 8888</span></div>
-                          <Box mt={2}/>
-                          <div><span>Email: letsbeecorp@gmail.com</span>
-                          </div>
-                        </div>
-                      </Box>
-                </Grid>
-                <Grid item  xs={12} lg={3} style={{padding:"10px" }}>
-                  <img src={`${BASE_IMG}/v1615853566/letsbeelife/mapVector_qwstap.png`} />
-              </Grid>
-            </Grid>            
-      </div>
-        <Grid>
-            <Typography className={classes.copyright}>
-              All Rights Reserved © 2021 Let's Bee
-            </Typography>
+      <div className={classes.content}>
+        <Grid container direction="row">
+          <Grid item xs={12} lg={4} style={{ margin: '10px' }}>
+            <Box
+              style={{
+                paddingTop: '10px'
+              }}
+            >
+              <Typography>
+                <div style={{ marginBottom: '40px' }}>
+                  <img
+                    src={`${BASE_IMG}/v1615853557/letsbeelife/footerLogo_ufzdrz.png`}
+                  />
+                </div>
+                <div
+                  style={{
+                    alignItems: 'flex-start',
+                    display: 'flex',
+                    justifyContent: 'flex-start',
+                    marginRight: '5px'
+                  }}
+                >
+                  <a href="#" style={{ marginRight: '5px' }}>
+                    <img
+                      src={`${BASE_IMG}/v1615853627/letsbeelife/social/facebook_d4yuvj.png`}
+                    />
+                  </a>
+                  <a href="#" style={{ marginRight: '5px' }}>
+                    <img
+                      src={`${BASE_IMG}/v1615853627/letsbeelife/social/Instagram_ilnjhc.png`}
+                    />
+                  </a>
+                  <a href="#" style={{ marginRight: '5px' }}>
+                    <img
+                      src={`${BASE_IMG}/v1615853627/letsbeelife/social/youtube_ykkwly.png`}
+                    />
+                  </a>
+                  <a href="#" style={{ marginRight: '5px' }}>
+                    <img
+                      src={`${BASE_IMG}/v1615853627/letsbeelife/social/tiktok_isiufu.png`}
+                    />
+                  </a>
+                </div>
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} lg={4} style={{ padding: '10px' }}>
+            <Box>
+              <div
+                component="subtitle"
+                display={{ xs: 'none', lg: 'block', xl: 'block' }}
+                className={classes.footerInfo}
+              >
+                {' '}
+                <div>
+                  <Typography variant="h3">Contact Information </Typography>
+                  <span>
+                    Head Office: Block 4, Lot 5, Yukon Street, <br />
+                    Riverside Subdivision, Brgy. Anunas, Angeles City, <br />
+                    Pampanga
+                  </span>
+                </div>
+                <div>
+                  <Box mt={4} />
+                  <span>Hotline: (045) 888 8888</span>
+                </div>
+                <Box mt={2} />
+                <div>
+                  <span>Email: letsbeecorp@gmail.com</span>
+                </div>
+              </div>
+            </Box>
+          </Grid>
+          <Grid item xs={12} lg={3} style={{ padding: '10px' }}>
+            <img
+              src={`${BASE_IMG}/v1615853566/letsbeelife/mapVector_qwstap.png`}
+            />
+          </Grid>
         </Grid>
-        
+      </div>
+      <Grid>
+        <Typography className={classes.copyright}>
+          All Rights Reserved © 2021 Let's Bee
+        </Typography>
+      </Grid>
     </div>
-    
   );
 }
 
