@@ -101,13 +101,13 @@ function Service_sec3({ className }) {
       icon: `${BASE_IMG_S3}/services_page/food_icon.png`,
       title: 'Food',
       description:
-        'The set is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.'
+        'Let’s Bee makes it easy to have your favorite Korean and local cuisines delivered at your doorsteps.'
     },
     {
       icon: `${BASE_IMG_S3}/services_page/grocery.png`,
       title: 'Groceries',
       description:
-        'Easy to customize and extend each component, saving you time and money.'
+        'Add to cart your grocery essentials and Let’s Bee will deliver them fresh, in good condition and complete with a BEE smile from our riders!'
     },
   ];
 
@@ -135,7 +135,7 @@ function Service_sec3({ className }) {
               <Box className={classes.content} >
                             <MotionInView variants={varFadeInDown}>
                                 <Typography variant="h2" align="center" >
-                                Lorem ipsum dolor sit amet consectetur adipiscing
+                                OTHER SERVICES OF LET’S BEE
                                 </Typography>
                             </MotionInView>
                 </Box>

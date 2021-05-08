@@ -8,7 +8,7 @@ export const getImgCover = (width, index) =>
   `${BASE_IMG}w_${width}/v1611411356/upload_minimal/covers/cover_${index}.jpg`;
 
 export const getImgFeed = (width, index) =>
-  `${BASE_IMG}/v1614672779/feeds/feed_${index}.png`;
+  `${BASE_IMG_S3}/v1614672779/feeds/feed_${index}.png`;
 
 export const getImgProduct = (width, index) =>
   `${BASE_IMG}w_${width}/v1611420989/upload_minimal/products/shose_${index}.jpg`;

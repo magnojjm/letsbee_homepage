@@ -21,9 +21,9 @@ const useStyles = makeStyles(theme => ({
       content: "''",
       height: '100%',
       position: 'absolute',
-      backgroundImage: `linear-gradient(to top, ${
-        theme.palette.grey[900]
-      } 0%,${alpha(theme.palette.grey[900], 0)} 100%)`,
+      // backgroundImage: `linear-gradient(to top, ${
+      //   theme.palette.grey[900]
+      // } 0%,${alpha(theme.palette.grey[900], 0)} 100%)`,
     }
   },
   title:{
@@ -101,7 +101,7 @@ function SlideItem({ item, isActive }) {
       >
         <MotionContainer open={isActive}>
           <Box sx={{ maxWidth: 480, color: 'white' }}>
-            <motion.div variants={varFadeInRight}>
+            {/* <motion.div variants={varFadeInRight}>
               <Typography className={classes.title} variant="h3" gutterBottom>
                 {item.title}
               </Typography>
@@ -110,7 +110,7 @@ function SlideItem({ item, isActive }) {
               <Typography className={classes.title} variant="body2" noWrap gutterBottom>
                 {item.description}
               </Typography>
-            </motion.div>
+            </motion.div> */}
             <motion.div variants={varFadeInRight}>
               <Button className={classes.viewButton} variant="contained" sx={{ mt: 3 }}>
                 View More

@@ -136,9 +136,9 @@ function AboutHelps({ className }) {
           <Grid item xs={12} sm={8} lg={7}>
             <MotionInView variants={textAnimate}>
                   <Typography className={classes.textHead} color="textSecondary" variant="h1">
-                  Let’s Bee<br />
-                  lets you get what you<br />
-                  desire on-the-fly!
+                  Let’s Bee lets you get what you<br />
+                  desire “on-the-fly!”<br />
+                  Your All-In-One Lifestyle App
                   </Typography>
                   <Typography variant="h3">
                   It’s your all-in-one lifestyle platform.

@@ -48,7 +48,7 @@ function Service_4({ className }) {
               <Box className={classes.content} >
                             <MotionInView variants={varFadeInDown}>
                                 <Typography variant="h2" align="center" >
-                                Lorem ipsum dolor sit amet consectetur adipiscing
+                                OTHER SERVICES OF LET’S BEE
                                 </Typography>
                             </MotionInView>
                 </Box>
@@ -63,13 +63,13 @@ function Service_4({ className }) {
                                   /></Box>
                                   <div style={{textAlign: "center"}}>
                                       <Typography style={{ textAlign: "center", margin:"30px"}} variant="h4">
-                                          <span style={{ color: 'black'}}>Hotel</span>
+                                          <span style={{ color: 'black'}}>Hotel Booking</span>
                                       </Typography>
                                   </div>
                                   <div style={{textAlign: "center"}}>
                                       <Typography style={{ textAlign: "center", margin:"30px"}} variant="p">
                                           <span style={{ color: 'black'}}>
-                                          Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid unt ut labore et. 
+                                          Looking for an affordable yet comfy hotel to stay and spend your time while in the city? Worry not, Let’s Bee has its hotel listing and complete contact information to help you decide where to have your staycation.
                                             </span>
                                       </Typography>
                                   </div>
@@ -87,13 +87,13 @@ function Service_4({ className }) {
                                 /></Box>
                                 <div style={{textAlign: "center"}}>
                                     <Typography style={{ textAlign: "center", margin:"30px"}} variant="h4">
-                                        <span style={{ color: 'black'}}>Massage</span>
+                                        <span style={{ color: 'black'}}>Pool Villa</span>
                                     </Typography>
                                 </div>
                                 <div style={{textAlign: "center"}}>
                                     <Typography style={{ textAlign: "center", margin:"30px"}} variant="p">
                                         <span style={{ color: 'black'}}>
-                                        Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid unt ut labore et. 
+                                        Planning for a family get together without compromising your safety, Let’s Bee offers pool villas which have various facilities and amenities that the whole can enjoy without staying outside. Book your choice of villa through the Let’s Bee App!
                                           </span>
                                     </Typography>
                                 </div>
@@ -117,7 +117,7 @@ function Service_4({ className }) {
                                 <div style={{textAlign: "center"}}>
                                     <Typography style={{ textAlign: "center", margin:"30px"}} variant="p">
                                         <span style={{ color: 'black'}}>
-                                        Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid unt ut labore et. 
+                                        From a simple ride to supercars, we have them all on the Let’s Bee App. Check the updated listing now and book your dream car to experience life to the fullest with Let’s Bee!
                                           </span>
                                     </Typography>
                                 </div>
@@ -141,7 +141,7 @@ function Service_4({ className }) {
                                 <div style={{textAlign: "center"}}>
                                     <Typography style={{ textAlign: "center", margin:"30px"}} variant="p">
                                         <span style={{ color: 'black'}}>
-                                        Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid unt ut labore et. 
+                                        Waterparks, leisure parks, resorts and tourist spots are your choices to spend a fun and worthwhile time with your loved ones. Plan it ahead of time and check on the Let’s Bee App the important details and book it right away.
                                           </span>
                                     </Typography>
                                 </div>

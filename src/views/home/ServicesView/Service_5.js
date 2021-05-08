@@ -101,13 +101,13 @@ function Service_5({ className }) {
       icon: `${BASE_IMG_S3}/services_page/food_icon.png`,
       title: 'Food',
       description:
-        'The set is built on the principles of the atomic design system. It helps you to create projects fastest and easily customized packages for your projects.'
+        'Let’s Bee makes it easy to have your favorite Korean and local cuisines delivered at your doorsteps.'
     },
     {
       icon: `${BASE_IMG_S3}/services_page/grocery.png`,
       title: 'Groceries',
       description:
-        'Easy to customize and extend each component, saving you time and money.'
+        'Add to cart your grocery essentials and Let’s Bee will deliver them fresh, in good condition and complete with a BEE smile from our riders!'
     },
   ];
 
@@ -135,7 +135,7 @@ function Service_5({ className }) {
               <Box className={classes.content} >
                             <MotionInView variants={varFadeInDown}>
                                 <Typography variant="h2" align="center" >
-                                Lorem ipsum dolor sit amet consectetur adipiscing
+                                OTHER SERVICES OF LET’S BEE
                                 </Typography>
                             </MotionInView>
                 </Box>
@@ -155,7 +155,7 @@ function Service_5({ className }) {
                            <div style={{textAlign: "center"}}>
                                <Typography style={{ textAlign: "center", margin:"30px"}} variant="p">
                                    <span style={{ color: 'black'}}>
-                                   Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid unt ut labore et. 
+                                   BEEp!BEEp!BEEp! Hailing a taxi is not a problem with Let’s Bee. Book it through the app and just wait comfortably for your safe ride.
                                      </span>
                                </Typography>
                            </div>
@@ -178,7 +178,7 @@ function Service_5({ className }) {
                                       <div style={{textAlign: "center"}}>
                                           <Typography style={{ textAlign: "center", margin:"30px"}} variant="p">
                                               <span style={{ color: 'black'}}>
-                                              Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid unt ut labore et. 
+                                              BEE relaxed and tune-up your body with the help of Let’s Bee. Check out on the app the nearest massage shop for you to experience the relaxing and rejuvenating feeling.
                                                 </span>
                                           </Typography>
                                       </div>

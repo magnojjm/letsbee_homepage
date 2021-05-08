@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
 
     margin: '26px 250px 0px 25px',
     maxWidth: '50%',
-    fontSize: '48px',
+    fontSize: '16px',
     fontWeight: 'bold',
     fontStretch: 'normal',
     fontStyle: 'normal',
@@ -185,8 +185,13 @@ function AboutHelps({ className }) {
                 <motion.div variants={varFadeInRight}>
                   <Box component="p" sx={{ color: 'common.white', py: 5 }}>
                     <Typography className={classes.textAbout}>
-                      Lorem ipsum dolor sit amet, cons, ectetur adipiscing elit,
-                      sed do eiu smod tempor incidid.
+                    Our BEEginning
+Let’s Bee is a start-up company that has begun its operations in January 2020 by facilitating online the food
+deliveries of its partnered Korean restaurants in Angeles City and Clarkfield, Pampanga. Just like bees, the founders
+worked hard on developing the company services to not be limited in food services but to explore other industries and
+services such as, Car Rentals, Wellness &amp; Spa, Real Estate &amp; Brokerage, Hotel &amp; Resort Bookings and even local
+businesses. It envisions to be one of the leading service and information providers in the country and also to reach out
+in the global market.
                     </Typography>
                   </Box>
                 </motion.div>

@@ -139,7 +139,7 @@ function PartnersHelps({ className }) {
           </MotionInView> */}
           <MotionInView variants={varFadeInDown}>
             <Typography variant="h2" align="center">
-            Partnered with businesses - big and small
+            Let’s Bee Partners even you are small or big
             </Typography>
           </MotionInView>
         </div>

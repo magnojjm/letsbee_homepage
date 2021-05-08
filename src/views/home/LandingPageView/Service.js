@@ -57,7 +57,7 @@ const theme = createMuiTheme({
 });
 
 
-const CAROUSELS = [...Array(4)].map((item, index) => {
+const CAROUSELS = [...Array(2)].map((item, index) => {
   const setIndex = index;
   return {
     title: "Get what you’\re looking for in a buzz!",

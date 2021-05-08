@@ -35,7 +35,6 @@ function LandingPageView() {
       <div className={classes.content}>
         <Box mt={5}>
           <About />
-          <Type />
           <CenterText />
           <Real_Section />
         </Box>

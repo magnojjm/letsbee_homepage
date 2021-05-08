@@ -72,7 +72,7 @@ function Service_7({ className }) {
               <Box className={classes.content} >
                             <MotionInView variants={varFadeInDown}>
                                 <Typography variant="h2" align="center" >
-                                Lorem ipsum dolor sit amet consectetur adipiscing
+                                OTHER SERVICES OF LET’S BEE
                                 </Typography>
                             </MotionInView>
                 </Box>
@@ -92,7 +92,7 @@ function Service_7({ className }) {
                            <div style={{textAlign: "center"}}>
                                <Typography style={{ textAlign: "center", margin:"30px"}} variant="p">
                                    <span style={{ color: 'black'}}>
-                                   Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid unt ut labore et. 
+                                   Track and trace your cargo and parcel through the app and wait for our BEE driver to deliver it on your doorsteps.
                                      </span>
                                </Typography>
                            </div>

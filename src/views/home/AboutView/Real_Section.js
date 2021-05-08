@@ -96,25 +96,25 @@ function Real_Section({ className }) {
         <Grid container >
           <Grid item xs={12} md={6} lg={6}>
             <div className={classes.content}>
-              <MotionInView variants={textAnimate}>
+              {/* <MotionInView variants={textAnimate}>
                 <Typography style={{marginBottom: "10px"}} variant="h2">
                 Lorem ipsum dolor sit
                 </Typography>
-              </MotionInView>
+              </MotionInView> */}
 
               <MotionInView variants={textAnimate}>
                 <Typography style={{marginBottom: "20px"}} variant="h4">
-                  Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt
+                Our Mission - Provide hassle-free all-in-one service with reliable content, Seek and adapt new technologies to improve our services, Contribute to the community by offering online platform to local businesses
                   </Typography>
               </MotionInView>
               <MotionInView variants={textAnimate}>
                 <Typography style={{marginBottom: "20px"}} variant="h4">
-                  Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt
+                Our Vision - We aim to be the leading-edge application provider by integrating services that will satisfy your daily needs
                   </Typography>
               </MotionInView>
               <MotionInView variants={textAnimate}>
                 <Typography variant="h4">
-                  Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt
+                Core Values - Customer oriented : Helping customers to meet their daily needs, Cultural Diversity : Embracing diverse cultures that started from K-culture, Consistency : Seeking ways to improve our services
                   </Typography>
               </MotionInView>
             </div>

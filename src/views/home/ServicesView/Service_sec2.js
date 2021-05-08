@@ -13,19 +13,19 @@ const CARDS = [
     icon: `${BASE_IMG_S3}/services_page/delivery_icon_cr09xx.png`,
     title: 'Delivery',
     description:
-      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      'Are you craving for something delicious especially want to experience authentic Korean Food but do not want to risk your safety and do not know where to go and what to eat? Check out the Let’s Bee App. Let’s Bee full with Let’s Bee Food Delivery. Advance Reservation - Philippines is one of the best destinations for tourists and'
   },
   {
     icon: `${BASE_IMG_S3}/services_page/Reservation_Icon_rupzvl.png`,
     title: `Advance Reservations`,
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'
+      'Philippines is one of the best destinations for tourists and locals and Clark has its own fair share of tourist influx. Let’s Bee helps in booking accommodations in different hotels and resorts in Angeles City and Clark.'
   },
   {
     icon: `${BASE_IMG_S3}/services_page/Booking_Icon.png`,
     title: 'Real Time Bookings',
     description:
-       'Adipiscing elit, sed do eiusm od tempor incididunt ut lab ore et dolore magna aliqua.'
+       'Booking your planned trips is made more hassle-free by Let’s Bee. In this section, Let’s Bee offers service listings for easier and real-time communication with your favorite and trusted booking sites for hotels, resorts and transportation.'
   },
   
 ];
@@ -34,13 +34,13 @@ const cards2 = [
     icon: `${BASE_IMG_S3}/services_page/Martketplace.png`,
     title: `Marketplace`,
     description:
-      'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      'Marketplace- Other stores and businesses you are looking for are here in this section. Let’s Bee partnership has a wide network with local businesses.'
   },
   {
     icon: `${BASE_IMG_S3}/services_page/Logistics.png`,
     title: 'Logistics',
     description:
-       'Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'
+       'Sending and receiving your parcels from and to abroad or domestically is just a click away. Let’s Bee logistics provides forwarding, door-to-door, warehousing and courier services wherever that may be. Life will always BEE full of haBEEness with Let’s Bee.'
   } 
 ]
 
@@ -141,7 +141,7 @@ function Service_sec2({ className }) {
         <div className={classes.heading}>
           <MotionInView variants={varFadeInDown}>
             <Typography variant="h1" align="center">
-            Lorem ipsum dolor sit amet consectetur adipiscing
+            Main Services
             </Typography>
           </MotionInView>
       

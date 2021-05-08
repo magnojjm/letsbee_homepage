@@ -46,7 +46,7 @@ function CenterTextHelps({ className }) {
        <Container maxWidth="xl" className={classes.sectionThree}>
             <div className={classes.adsSection}>
                 <Typography variant="h2">
-                “Lorem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt”
+                “Let’s Bee, Your friendly companion from day to day”
                 </Typography>
             </div>
             </Container>      
