@@ -125,11 +125,11 @@ function Footer({ className }) {
                 </div>
                 <div>
                   <Box mt={4} />
-                  <span>Hotline: (045) 888 8888</span>
+                  <span>Hotline: (045) 300 6546</span>
                 </div>
                 <Box mt={2} />
                 <div>
-                  <span>Email: letsbeecorp@gmail.com</span>
+                  <span>Email: hello@letsbee.ph</span>
                 </div>
               </div>
             </Box>
